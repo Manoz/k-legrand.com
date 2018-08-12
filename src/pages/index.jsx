@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import styled from 'styled-components';
 
 import Hero from '../components/Hero';
-import Layout from '../components/Layout';
+import SiteLayout from '../components/Layouts/SiteLayout';
 import Section from '../components/Section';
 import Container from '../components/Container';
 
@@ -72,23 +71,12 @@ const Cite = styled.cite`
   color: #9e9e9e;
 `;
 
-const IndexPage = () => (
-  <StaticQuery
-    query={graphql`
-      query TestQuery {
-        site {
-          siteMetadata {
-            title,
-            titleAlt
-          }
-          buildTime(formatString: "dddd, MMMM Do YYYY, h:mm:ss a")
-        }
-      }
-    `}
-    render={data => (
-      <Layout>
+class IndexPage extends React.Component {
+  render() {
+    return (
+      <SiteLayout>
         <Container>
-          <Hero titleAlt={data.site.siteMetadata.titleAlt} />
+          <Hero titleAlt="Kevin Legrand" />
           <ScrollableAnchor id={'ido'}>
             <Section>
               <header style={{ marginBottom: '24px' }}>
@@ -100,10 +88,10 @@ const IndexPage = () => (
               </header>
               <div>
                 <p>Most of my time I am building websites for my clients or for me.
-                Usually simple responsive websites with SCSS, WordPress and some Javascript.</p>
+                  Usually simple responsive websites with SCSS, WordPress and some Javascript.</p>
 
                 <p>In my spare time I am building other things like nodejs apps or
-                more recently Facebook apps.</p>
+                  more recently Facebook apps.</p>
 
                 <p>Sometime I also write articles about design and development.</p>
               </div>
@@ -132,7 +120,7 @@ const IndexPage = () => (
                 }}>torrents</span>, Facebook Apps</p>
 
                 <p><strong>Improving:</strong> ECMAScript 6/7, Gatsby,
-                Facebook Messenger Bots, VueJS</p>
+                  Facebook Messenger Bots, VueJS</p>
               </div>
             </Section>
           </ScrollableAnchor>
@@ -150,7 +138,7 @@ const IndexPage = () => (
               <div>
                 <p>The Internets, Dodie, Faim de Lyon, Club des CML, Footengo,
                 Michel Bastos, Otako, Écoute Prolongée, FNAQPA, Éclat de Verre,
-                Fél&apos;Ain, Darty, Charal, Hépar, Les Portes du Soleil, April</p>
+                  Fél&apos;Ain, Darty, Charal, Hépar, Les Portes du Soleil, April</p>
               </div>
             </Section>
           </ScrollableAnchor>
@@ -193,10 +181,10 @@ const IndexPage = () => (
             </Section>
           </ScrollableAnchor>
         </Container>
-      </Layout>
-    )}
-  />
-);
+      </SiteLayout>
+    );
+  }
+}
 
 IndexPage.propTypes = {
   data: PropTypes.string,

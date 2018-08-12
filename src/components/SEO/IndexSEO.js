@@ -2,10 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import config from '../../../../config/SiteConfig';
+import config from '../../../config/SiteConfig';
 import favicon from './favicon.png';
 
-const SEO = (props) => {
+const IndexSEO = (props) => {
   const { postNode, postSEO } = props;
   const realPrefix = config.pathPrefix !== '/' ? '' : config.pathPrefix;
   let title;
@@ -83,9 +83,9 @@ const SEO = (props) => {
   );
 };
 
-SEO.propTypes = {
+IndexSEO.propTypes = {
   postNode: PropTypes.node,
-  postSEO: PropTypes.node,
+  postSEO: PropTypes.any,
 };
 
-export default SEO;
+export default IndexSEO;
