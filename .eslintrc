@@ -1,0 +1,56 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "arrow-body-style": [2, "as-needed"],
+    "class-methods-use-this": 0,
+    "comma-dangle": [2, "always-multiline"],
+    "import/imports-first": 0,
+    "import/newline-after-import": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": 2,
+    "import/prefer-default-export": 0,
+    "import/no-webpack-loader-syntax": 0,
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-confusing-arrow": 0,
+    "no-console": 0,
+    "no-shadow": 0,
+    "no-use-before-define": 0,
+    "operator-linebreak": 0,
+    "prefer-destructuring": 0,
+    "prefer-template": 2,
+    "react/jsx-no-target-blank": 0
+  },
+  "settings": {
+    "import/core-modules": [],
+    "import/ignore": [
+      "node_modules",
+      "\\.(coffee|scss|css|less|hbs|svg|json)$"
+    ]
+  }
+}
