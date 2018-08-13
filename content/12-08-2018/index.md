@@ -1,7 +1,7 @@
 ---
 title: "My first post"
-cover: "https://unsplash.it/800/200/?random?BirchintheRoses"
-date: "12/08/2018"
+cover: "https://unsplash.it/920/260/?random?BirchintheRoses"
+date: "12 Aug 2018"
 category: "tech"
 tags:
     - tag
