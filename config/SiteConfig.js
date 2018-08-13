@@ -45,6 +45,6 @@ module.exports = {
   themeColor: '#387CC6',
   backgroundCOlor: '#663399',
 
-  dateFromFormat: 'YYYY-MM-DD',
-  dateFormat: 'DD/MM/YYYY',
+  dateFromFormat: 'YYYY MMM DDo',
+  dateFormat: 'DDo MMM YYYY',
 };
