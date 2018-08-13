@@ -30,8 +30,10 @@ class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <BlogSEO postPath={slug} postNode={postNode} postSEO />
+          {/* console.log(JSON.stringify(post, null, 4)) */}
           <div>
             <h1>{post.title}</h1>
+            <img src={post.cover} alt=""/>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
