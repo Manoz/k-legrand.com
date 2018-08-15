@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from './logo.svg';
+import logo from './images/logo.svg';
 import A from './styles/A';
 import Img from './styles/Img';
 import StyledLink from './styles/StyledLink';

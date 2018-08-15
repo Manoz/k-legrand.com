@@ -1,7 +1,7 @@
 import React from 'react';
 
-import coffee from './coffee.svg';
-import gatsby from './gatsby.svg';
+import coffee from './images/coffee.svg';
+import gatsby from './images/gatsby.svg';
 import Container from '../Container';
 import Wrapper from './styles/Wrapper';
 import A from './styles/A';
