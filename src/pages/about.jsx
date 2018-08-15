@@ -11,7 +11,7 @@ class AboutPage extends React.Component {
         <Container>
           <h1>About Page</h1>
           <p>This is the About page</p>
-          <Link to='/'>Back to home</Link>
+          <Link to="/">Back to home</Link>
         </Container>
       </PageLayout>
     );

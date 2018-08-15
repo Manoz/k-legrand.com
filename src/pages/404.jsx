@@ -22,7 +22,9 @@ class NotFoundPage extends React.Component {
         <Container>
           <h1>NOT FOUND</h1>
           <p>Hit the road Jack and don&#39;t you come back no more, no more, no more, no more...</p>
-          <p><em>(just in case, yes, you&#39;re lost. This is a 404 page Sherlock)</em></p>
+          <p>
+            <em>(just in case, yes, you&#39;re lost. This is a 404 page Sherlock)</em>
+          </p>
           <br />
           <Link to="/">Back to home</Link>
         </Container>

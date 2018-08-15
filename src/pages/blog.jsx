@@ -46,10 +46,7 @@ class Blog extends React.Component {
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={screenshot} />
-            <meta
-              property="fb:app_id"
-              content={config.siteFBAppID ? config.siteFBAppID : ''}
-            />
+            <meta property="fb:app_id" content={config.siteFBAppID ? config.siteFBAppID : ''} />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ''} />
@@ -69,10 +66,7 @@ class Blog extends React.Component {
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [fields___date], order: DESC }
-    ) {
+    allMarkdownRemark(limit: 2000, sort: { fields: [fields___date], order: DESC }) {
       edges {
         node {
           fields {
