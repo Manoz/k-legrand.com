@@ -1,15 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import styled from 'styled-components';
 
 import Hero from '../components/Hero';
-import Layout from '../components/Layout';
 import Section from '../components/Section';
 import Container from '../components/Container';
+import PageLayout from '../components/Layouts/PageLayout';
 
-configureAnchors({ offset: -60, scrollDuration: 400 });
+configureAnchors({
+  offset: -60,
+  scrollDuration: 400,
+  keepLastAnchorHash: false,
+});
 
 const H3 = styled.h3`
   margin-bottom: 1.5rem;
@@ -26,7 +28,6 @@ const Blockquote = styled.blockquote`
   font-family: 'Roboto', sans-serif;
   font-size: 86%;
   border-left: 7px solid #ccc;
-
   &:before {
     content: '\u201C';
     margin-right: 0.10em;
@@ -47,16 +48,13 @@ const StyledA = styled.a`
   padding-bottom: 3px;
   border-bottom: 2px solid #9e9e9e;
   transition: color .1s !important;
-
   &:first-child { margin-left: 0; }
   &:last-child { margin-right: 0; }
-
   &:hover {
     color: transparent;
     text-decoration: none !important;
     transition: color .1s !important;
   }
-
   &[href*="facebook.com"]:hover { color: #3a589b !important; border-color: #3a589b }
   &[href*="twitter.com"]:hover { color: #33ccff !important; border-color: #33ccff }
   &[href*="github.com"]:hover { color: #171515 !important; border-color: #171515 }
@@ -72,23 +70,12 @@ const Cite = styled.cite`
   color: #9e9e9e;
 `;
 
-const IndexPage = () => (
-  <StaticQuery
-    query={graphql`
-      query TestQuery {
-        site {
-          siteMetadata {
-            title,
-            titleAlt
-          }
-          buildTime(formatString: "dddd, MMMM Do YYYY, h:mm:ss a")
-        }
-      }
-    `}
-    render={data => (
-      <Layout>
+class IndexPage extends React.Component {
+  render() {
+    return (
+      <PageLayout>
         <Container>
-          <Hero titleAlt={data.site.siteMetadata.titleAlt} />
+          <Hero titleAlt="Kevin Legrand" />
           <ScrollableAnchor id={'ido'}>
             <Section>
               <header style={{ marginBottom: '24px' }}>
@@ -166,13 +153,13 @@ const IndexPage = () => (
               </header>
               <div>
                 <p>
-                  <StyledA data-hover="Facebook" href="https://www.facebook.com/lboldair" target="_blank">Facebook</StyledA>
-                  <StyledA data-hover="Twitter" href="https://www.twitter.com/manoz" target="_blank">Twitter</StyledA>
-                  <StyledA data-hover="Github" href="https://github.com/manoz" target="_blank">Github</StyledA>
-                  <StyledA data-hover="Instagram" href="https://www.instagram.com/manoz_" target="_blank">Instagram</StyledA>
-                  <StyledA data-hover="LinkedIn" href="https://fr.linkedin.com/in/klegr" target="_blank">LinkedIn</StyledA>
-                  <StyledA data-hover="Stackoverflow" href="http://stackoverflow.com/users/3272666/manoz" target="_blank">Stackoverflow</StyledA>
-                  <StyledA data-hover="Codepen" href="http://codepen.io/Manoz" target="_blank">Codepen</StyledA>
+                  <StyledA href="https://www.facebook.com/lboldair" target="_blank">Facebook</StyledA>
+                  <StyledA href="https://www.twitter.com/manoz" target="_blank">Twitter</StyledA>
+                  <StyledA href="https://github.com/manoz" target="_blank">Github</StyledA>
+                  <StyledA href="https://www.instagram.com/manoz_" target="_blank">Instagram</StyledA>
+                  <StyledA href="https://fr.linkedin.com/in/klegr" target="_blank">LinkedIn</StyledA>
+                  <StyledA href="http://stackoverflow.com/users/3272666/manoz" target="_blank">Stackoverflow</StyledA>
+                  <StyledA href="http://codepen.io/Manoz" target="_blank">Codepen</StyledA>
                 </p>
               </div>
             </Section>
@@ -193,13 +180,9 @@ const IndexPage = () => (
             </Section>
           </ScrollableAnchor>
         </Container>
-      </Layout>
-    )}
-  />
-);
-
-IndexPage.propTypes = {
-  data: PropTypes.string,
-};
+      </PageLayout>
+    );
+  }
+}
 
 export default IndexPage;
