@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ThePost from './ThePost';
-import Small from './Small';
-import StyledLink from './StyledLink';
+import ThePost from './styles/ThePost';
+import Small from './styles/Small';
+import StyledLink from './styles/StyledLink';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -28,7 +28,7 @@ class PostListing extends React.Component {
       <div className="posts-list">
         {postList.map(post => (
           <ThePost key={post.title}>
-            <h3>
+            <h3 style={{ marginBottom: '0px' }}>
               <StyledLink to={post.path} key={post.title}>
                 {post.title}
               </StyledLink>
@@ -36,7 +36,7 @@ class PostListing extends React.Component {
             <Small>
               {post.date} - <span>{post.timeToRead} min read</span>
             </Small>
-            <p>{post.excerpt}</p>
+            <p style={{ marginTop: '0.8rem' }}>{post.excerpt}</p>
           </ThePost>
         ))}
       </div>
