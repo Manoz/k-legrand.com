@@ -3,10 +3,12 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
+import UserBio from '../components/UserInfo/UserBio';
 import Container from '../components/Container';
 import BlogLayout from '../components/Layouts/BlogLayout';
 import PostListing from '../components/PostListing';
 import config from '../../config/SiteConfig';
+
 import favicon from '../components/SEO/favicon.png';
 import screenshot from '../components/SEO/screenshot.jpg';
 
@@ -57,6 +59,7 @@ class Blog extends React.Component {
 
             <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
           </Helmet>
+          <UserBio />
           <PostListing postEdges={postEdges} />
         </Container>
       </BlogLayout>
@@ -74,9 +77,9 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
-            date
+            date(formatString: "DD MMMM, YYYY")
           }
-          excerpt
+          excerpt(pruneLength: 250)
           timeToRead
           frontmatter {
             title

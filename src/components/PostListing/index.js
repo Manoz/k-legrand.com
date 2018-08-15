@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+
+import ThePost from './ThePost';
+import Small from './Small';
+import StyledLink from './StyledLink';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -22,13 +25,18 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div>
+      <div className="posts-list">
         {
           postList.map(post => (
-            <Link to={post.path} key={post.title}>
-              <h1>{post.title}</h1>
-              <img src={post.cover} alt={post.title}/>
-            </Link>
+            <ThePost key={post.title}>
+              <h3>
+                <StyledLink to={post.path} key={post.title}>
+                  {post.title}
+                </StyledLink>
+              </h3>
+              <Small>{post.date} - <span>{post.timeToRead} min read</span></Small>
+              <p>{post.excerpt}</p>
+            </ThePost>
           ))
         }
       </div>

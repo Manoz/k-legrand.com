@@ -2,6 +2,17 @@ import React from 'react';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import styled from 'styled-components';
 
+// Commented lines below are an example on how to async load a component
+
+// import 'babel-polyfill';
+
+// import asyncComponent from '../components/AsyncComponent';
+
+// const Hero = asyncComponent(() => import('../components/Hero'));
+// const Section = asyncComponent(() => import('../components/Section'));
+// const Container = asyncComponent(() => import('../components/Container'));
+// const PageLayout = asyncComponent(() => import('../components/Layouts/PageLayout'));
+
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import Container from '../components/Container';

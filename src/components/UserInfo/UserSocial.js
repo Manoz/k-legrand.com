@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Follow } from 'react-twitter-widgets';
 
-class UserInfo extends Component {
+class UserSocial extends Component {
   render() {
     return (
       <div className="author-infos">
@@ -17,4 +17,4 @@ class UserInfo extends Component {
   }
 }
 
-export default UserInfo;
+export default UserSocial;
