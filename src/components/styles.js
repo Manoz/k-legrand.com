@@ -121,10 +121,62 @@ injectGlobal`
     }
   }
 
+  ol p,
+  ul p,
+  blockquote p {
+    margin-top: 0;
+  }
+
+  dl,
   ol,
   ul {
     padding: 0;
     margin: 1rem 0 1rem 1.11111rem;
+  }
+
+  dt { font-weight: bold; }
+
+  dd {
+    margin-bottom: .5rem;
+    margin-left: 0;
+  }
+
+  /* table { border-collapse: collapse; }
+
+  th { text-align: inherit; }
+
+  caption {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: #6c757d;
+    text-align: left;
+    caption-side: bottom;
+  } */
+
+  table {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    overflow: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    tr {
+      background-color: #fff;
+      border-top: 1px solid #c6cbd1;
+    }
+
+    th {
+      padding: 6px 13px;
+      font-weight: bold;
+      border: 1px solid #dfe2e5;
+    }
+
+    td {
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
   }
 
   ol ol,

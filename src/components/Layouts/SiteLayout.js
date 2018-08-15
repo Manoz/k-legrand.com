@@ -2,15 +2,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SEO from './Header/SEO';
-import Header from './Header';
-import Footer from './Footer';
+import IndexSEO from '../SEO/IndexSEO';
+import Header from '../Header';
+import Footer from '../Footer';
 
-import './styles';
+import '../styles';
 
-const Layout = ({ children }) => (
+const SiteLayout = ({ children }) => (
   <div className="wrapper">
-    <SEO />
+    <IndexSEO />
     <Header />
     <main style={{ marginTop: '120px' }} role="main">
       {children}
@@ -19,8 +19,8 @@ const Layout = ({ children }) => (
   </div>
 );
 
-Layout.propTypes = {
+SiteLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default SiteLayout;
