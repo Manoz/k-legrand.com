@@ -7,7 +7,6 @@ import Footer from '../Footer';
 
 import '../styles';
 
-
 class PageLayout extends React.Component {
   render() {
     const { children, pageSEO } = this.props;

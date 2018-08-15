@@ -16,7 +16,7 @@ const StyledLink = styled(Link)`
   &:hover {
     color: var(--colorPink) !important;
     text-decoration: none !important;
-    transition: color .2s !important;
+    transition: color 0.2s !important;
   }
 
   img {

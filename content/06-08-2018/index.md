@@ -1,13 +1,14 @@
 ---
-title: "My second post"
-cover: "https://unsplash.it/1152/300/?random?BirchintheRoses"
-date: "06/08/2018"
-category: "tech"
+title: 'My second post'
+cover: 'https://unsplash.it/1152/300/?random?BirchintheRoses'
+date: '06/08/2018'
+category: 'tech'
 tags:
-    - tag
-    - another tag
-    - random tag
+  - tag
+  - another tag
+  - random tag
 ---
+
 # Domos primus caelum taedia
 
 ## Accipit alto fecerat mutato centauri haerent dominoque
@@ -24,20 +25,20 @@ altus **de vesper** membra blanditiis aethera orgia.
 ## Supersunt Prothoenora arida moturaque fuerit demissaque aut
 
 ```javascript
-import React from 'react';
+import React from 'react'
 
 // This is a comment
 class MyComponent extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { isToggledOn: false };
+    super(props)
+    this.state = { isToggledOn: false }
 
-    this.toggleClass = this.toggleClass.bind(this);
+    this.toggleClass = this.toggleClass.bind(this)
   }
 
   toggleClass() {
-    const currentState = this.state.isToggledOn;
-    this.setState({ isToggledOn: !currentState });
+    const currentState = this.state.isToggledOn
+    this.setState({ isToggledOn: !currentState })
   }
 
   render() {
@@ -45,15 +46,19 @@ class MyComponent extends React.Component {
       <div>
         <a
           onClick={this.toggleClass}
-          className={this.state.isToggledOn ? 'some-class active' : 'some-class'}
-          href="http://www.example.com">My awesome link
+          className={
+            this.state.isToggledOn ? 'some-class active' : 'some-class'
+          }
+          href="http://www.example.com"
+        >
+          My awesome link
         </a>
       </div>
-    );
+    )
   }
 }
 
-export default MyComponent;
+export default MyComponent
 ```
 
 Hunc adventare duxit lacrimis hospes futurum fecerat inde manus reditum annos,
@@ -88,5 +93,5 @@ utinam sed, non nemo mixtos thyrsos. Inobservata subsunt.
 
 Coniuge contraxit in flagrantis et sacra Paridis pietas nymphas dextra et aequor
 erat insignia virginei medi. Acervo ferrum! Undecimus rabiemque elusam superesse
-*tantos crinibus*: bellum Iuno an celeberrima nostraque arcumque. Sive quod
+_tantos crinibus_: bellum Iuno an celeberrima nostraque arcumque. Sive quod
 inter Cynthia est gemitu crimina sis, et preces cuncta tamen?

@@ -1,24 +1,25 @@
 ---
-title: "My first post"
-cover: "https://unsplash.it/920/260/?random?BirchintheRoses"
-date: "12/08/2018"
-category: "tech"
+title: 'My first post'
+cover: 'https://unsplash.it/920/260/?random?BirchintheRoses'
+date: '12/08/2018'
+category: 'tech'
 tags:
-    - tag
-    - cats
-    - toto
-    - test
-    - lorem ipsum dolor
+  - tag
+  - cats
+  - toto
+  - test
+  - lorem ipsum dolor
 ---
+
 # This is rendered as an h1 title
 
-## This is rendered as an h2 title 
+## This is rendered as an h2 title
 
-Do you see any *Teletubbies* in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little **Asian child** with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here [shopping](http://www.google.com) for an infant named Jeb.
+Do you see any _Teletubbies_ in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little **Asian child** with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here [shopping](http://www.google.com) for an infant named Jeb.
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
 Combined emphasis with **asterisks and _underscores_**.
 
@@ -26,9 +27,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 1. First ordered list item
 2. Another item
-   * Unordered sub-list. 
-   * Another one
-1. Actual numbers don't matter, just that it's a number
+   - Unordered sub-list.
+   - Another one
+3. Actual numbers don't matter, just that it's a number
    1. Ordered sub-list
 4. And another item.
 
@@ -38,15 +39,17 @@ Strikethrough uses two tildes. ~~Scratch this.~~
    Note that this line is separate, but within the same paragraph.  
    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+[I'm a reference-style link][arbitrary case-insensitive reference text]
 
 [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
@@ -55,7 +58,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 Or leave it empty and use the [link text itself].
 
 URLs and URLs in angle brackets will automatically get turned into links.  
-http://www.example.com or <http://www.example.com> and sometimes 
+http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -66,61 +69,61 @@ Some text to show that the reference links can follow later.
 
 Here's our logo (hover to see the title text):
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
 
-Reference-style: 
+Reference-style:
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 2'
 
 Inline `code` has `back-ticks around` it.
 
 ```javascript
-const s = "JavaScript syntax highlighting";
-alert(s);
+const s = 'JavaScript syntax highlighting'
+alert(s)
 ```
- 
+
 ```python
 s = "Python syntax highlighting"
 print s
 ```
- 
+
 ```
-No language indicated, so no syntax highlighting. 
+No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
 Colons can be used to align columns.
 
-| Script        | Description                                                         |
-| ------------- |---------------------------------------------------------------------|
-| preinstall    | Runs automatically before yarn install to check your node version   |
-| prestart      | Runs automatically before start to display a message.               |
-| start         | Starts the dev webserver and opens the app in your default browser. |
+| Script     | Description                                                         |
+| ---------- | ------------------------------------------------------------------- |
+| preinstall | Runs automatically before yarn install to check your node version   |
+| prestart   | Runs automatically before start to display a message.               |
+| start      | Starts the dev webserver and opens the app in your default browser. |
 
 There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
+The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| _Still_  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
 
 Here's a line for us to start with.
 
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
 
 This line is also a separate paragraph, but...  
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+This line is only separated by a single newline, so it's a separate line in the _same paragraph_.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=wOMwO5T3yT4
 " target="_blank"><img src="http://img.youtube.com/vi/wOMwO5T3yT4/0.jpg" 
@@ -136,42 +139,39 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/wOMwO5T3yT4/0.jpg)](http://www.youtube.com/watch?v=wOMwO5T3yT4)
 
-
 Three or more...
 
 ---
 
 Hyphens
 
-***
+---
 
 Asterisks
 
-___
+---
 
 Underscores
-
-
 
 ## Supersunt Prothoenora arida moturaque fuerit demissaque aut
 
 Here's some code:
 
 ```javascript
-import React from 'react';
+import React from 'react'
 
 // This is a comment
 class MyComponent extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { isToggledOn: false };
+    super(props)
+    this.state = { isToggledOn: false }
 
-    this.toggleClass = this.toggleClass.bind(this);
+    this.toggleClass = this.toggleClass.bind(this)
   }
 
   toggleClass() {
-    const currentState = this.state.isToggledOn;
-    this.setState({ isToggledOn: !currentState });
+    const currentState = this.state.isToggledOn
+    this.setState({ isToggledOn: !currentState })
   }
 
   render() {
@@ -179,15 +179,19 @@ class MyComponent extends React.Component {
       <div>
         <a
           onClick={this.toggleClass}
-          className={this.state.isToggledOn ? 'some-class active' : 'some-class'}
-          href="http://www.example.com">My awesome link
+          className={
+            this.state.isToggledOn ? 'some-class active' : 'some-class'
+          }
+          href="http://www.example.com"
+        >
+          My awesome link
         </a>
       </div>
-    );
+    )
   }
 }
 
-export default MyComponent;
+export default MyComponent
 ```
 
 Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
@@ -207,4 +211,4 @@ Look, just because I don't be givin' no man a foot massage don't make it right f
 
 ## Venisse qui fortis nimis horruit ignarus quaeque
 
-Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. 
+Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.

@@ -22,8 +22,12 @@ class Hero extends React.Component {
   }
 
   componentDidMount() {
-    this.timer = setInterval(() => // eslint-disable-next-line
-      this.setState(prevState => ({ didMount: !prevState.test })), 500);
+    this.timer = setInterval(
+      () =>
+        // eslint-disable-next-line
+        this.setState(prevState => ({ didMount: !prevState.test })),
+      500
+    );
   }
 
   componentWillUnmount() {
@@ -37,16 +41,23 @@ class Hero extends React.Component {
       <div style={{ position: 'relative' }}>
         <HeroWrapper className={`${didMount && 'loaded'}`}>
           <div style={{ padding: '70px 0' }}>
-            <P style={{
-              fontFamily: 'var(--fontTitle)',
-              fontWeight: '200',
-              textAlign: 'center',
-            }}>
-              Ahoy! My name is <span style={{ fontWeight: '300' }}>Kevin Legrand</span><br />
-              <span style={{
-                fontSize: '2.1875rem',
-                lineHeight: '1.37143',
-              }}>I&apos;m a french front end developer</span>
+            <P
+              style={{
+                fontFamily: 'var(--fontTitle)',
+                fontWeight: '200',
+                textAlign: 'center',
+              }}
+            >
+              Ahoy! My name is <span style={{ fontWeight: '300' }}>Kevin Legrand</span>
+              <br />
+              <span
+                style={{
+                  fontSize: '2.1875rem',
+                  lineHeight: '1.37143',
+                }}
+              >
+                I&apos;m a french front end developer
+              </span>
             </P>
             <Nav />
           </div>
@@ -58,7 +69,8 @@ class Hero extends React.Component {
                 display: 'inline-block',
                 padding: '9px',
               }}
-              href="#ido" title="Do a barrel scroll"
+              href="#ido"
+              title="Do a barrel scroll"
             >
               <IconImg src={ArrowIcon} alt="arrow icon" />
             </a>

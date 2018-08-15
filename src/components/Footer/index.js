@@ -16,12 +16,16 @@ const Footer = () => (
         <Div>
           <P style={{ display: 'inline-block' }}>
             Copyright &copy; 2018 - Kevin Legrand
-            <Img style={{ width: '16px' }} src={coffee} alt="Icon Coffee" />&nbsp;
-            Fueled with <A href="https://en.wikipedia.org/wiki/Caffeine" title="Caffeine" target="_blank">C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></A>
+            <Img style={{ width: '16px' }} src={coffee} alt="Icon Coffee" />
+            &nbsp; Fueled with{' '}
+            <A href="https://en.wikipedia.org/wiki/Caffeine" title="Caffeine" target="_blank">
+              C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
+            </A>
           </P>
         </Div>
         <Div primary>
-          <P>Built with ❤️ using
+          <P>
+            Built with ❤️ using
             <a title="Gatsbyjs" href="https://next.gatsbyjs.org/">
               <Img style={{ width: '16px' }} src={gatsby} alt="Icon Gatsby" />
             </a>

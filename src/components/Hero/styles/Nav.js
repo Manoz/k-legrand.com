@@ -8,8 +8,13 @@ const A = styled.a`
   line-height: 1.71429;
   color: #777 !important;
 
-  &:visited { color: #777 !important; }
-  &:hover { color: #000 !important; text-decoration: none !important; }
+  &:visited {
+    color: #777 !important;
+  }
+  &:hover {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
 `;
 
 class Nav extends React.Component {
@@ -31,20 +36,14 @@ class Nav extends React.Component {
         <A
           onClick={this.toggleClass}
           className={this.state.isToggledOn ? 'toto active' : 'toto'}
-          href="#ido">#what I do
+          href="#ido"
+        >
+          #what I do
         </A>
-        <A
-          href="#ilearned">#what I learned
-        </A>
-        <A
-          href="#clients">#who are my clients
-        </A>
-        <A
-          href="#where">#where I am
-        </A>
-        <A
-          href="#hire">#hire me
-        </A>
+        <A href="#ilearned">#what I learned</A>
+        <A href="#clients">#who are my clients</A>
+        <A href="#where">#where I am</A>
+        <A href="#hire">#hire me</A>
       </nav>
     );
   }

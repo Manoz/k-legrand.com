@@ -11,7 +11,7 @@ const BioContainer = styled.div`
 `;
 
 const Img = styled.img`
-  margin-right: .875rem;
+  margin-right: 0.875rem;
   border-radius: 100%;
   border: 4px solid #ebebeb;
   width: 64px;
@@ -25,9 +25,9 @@ class UserBio extends React.Component {
         <BioContainer>
           <Img src={profilePic} alt="Manoz profile pic" />
           <p style={{ margin: '0 auto', fontSize: '1.1rem' }}>
-            My name is Kevin a.k.a <strong>Manoz</strong>. I am a front-end developer who
-            lives in Lyon, France. <br/>I work in a web agency who builds websites
-            using Laravel, React or WordPress depending on our clients.
+            My name is Kevin a.k.a <strong>Manoz</strong>. I am a front-end developer who lives in
+            Lyon, France. <br />I work in a web agency who builds websites using Laravel, React or
+            WordPress depending on our clients.
           </p>
         </BioContainer>
       </div>

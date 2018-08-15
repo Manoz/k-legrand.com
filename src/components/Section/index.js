@@ -11,8 +11,8 @@ const StyledSection = styled.section`
 
 const Col = styled.div`
   padding-bottom: 60px;
-  padding-right: .5rem;
-  padding-left: .5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   flex-basis: 90%;
   flex-grow: 0;
   flex-shrink: 0;
@@ -22,9 +22,7 @@ const Col = styled.div`
 
 const Section = ({ children }) => (
   <StyledSection>
-    <Col>
-      {children}
-    </Col>
+    <Col>{children}</Col>
   </StyledSection>
 );
 

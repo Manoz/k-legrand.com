@@ -26,19 +26,19 @@ class PostListing extends React.Component {
     const postList = this.getPostList();
     return (
       <div className="posts-list">
-        {
-          postList.map(post => (
-            <ThePost key={post.title}>
-              <h3>
-                <StyledLink to={post.path} key={post.title}>
-                  {post.title}
-                </StyledLink>
-              </h3>
-              <Small>{post.date} - <span>{post.timeToRead} min read</span></Small>
-              <p>{post.excerpt}</p>
-            </ThePost>
-          ))
-        }
+        {postList.map(post => (
+          <ThePost key={post.title}>
+            <h3>
+              <StyledLink to={post.path} key={post.title}>
+                {post.title}
+              </StyledLink>
+            </h3>
+            <Small>
+              {post.date} - <span>{post.timeToRead} min read</span>
+            </Small>
+            <p>{post.excerpt}</p>
+          </ThePost>
+        ))}
       </div>
     );
   }
