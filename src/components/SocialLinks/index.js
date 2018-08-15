@@ -14,7 +14,26 @@ import {
   RedditIcon,
 } from 'react-share';
 import urljoin from 'url-join';
+import styled from 'styled-components';
 import config from '../../../config/SiteConfig';
+
+const StyledDiv = styled.div`
+  display: flex;
+  margin: 10px auto;
+  flex-flow: row wrap;
+  align-items: center;
+
+  .SocialMediaShareButton {
+    cursor: pointer;
+    margin: 0 5px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+  }
+`;
 
 class SocialLinks extends React.Component {
   render() {
@@ -23,28 +42,28 @@ class SocialLinks extends React.Component {
     const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
     const post = postNode.frontmatter;
     const url = urljoin(config.blogUrl, pathPrefix, postPath);
-    const iconSize = mobile ? 36 : 48;
+    const iconSize = mobile ? 32 : 36;
     const filter = count => (count > 0 ? count : '');
     const renderShareCount = count => <div className="share-count">{filter(count)}</div>;
 
     return (
-      <div className="social-links">
-        <RedditShareButton url={url} title={post.title}>
-          <RedditIcon round size={iconSize} />
-          <RedditShareCount url={url}>{count => renderShareCount(count)}</RedditShareCount>
-        </RedditShareButton>
+      <StyledDiv className="social-links">
         <TwitterShareButton url={url} title={post.title}>
           <TwitterIcon round size={iconSize} />
         </TwitterShareButton>
-        <GooglePlusShareButton url={url}>
-          <GooglePlusIcon round size={iconSize} />
-          <GooglePlusShareCount url={url}>{count => renderShareCount(count)}</GooglePlusShareCount>
-        </GooglePlusShareButton>
         <FacebookShareButton url={url} quote={postNode.excerpt}>
           <FacebookIcon round size={iconSize} />
           <FacebookShareCount url={url}>{count => renderShareCount(count)}</FacebookShareCount>
         </FacebookShareButton>
-      </div>
+        <RedditShareButton url={url} title={post.title}>
+          <RedditIcon round size={iconSize} />
+          <RedditShareCount url={url}>{count => renderShareCount(count)}</RedditShareCount>
+        </RedditShareButton>
+        <GooglePlusShareButton url={url}>
+          <GooglePlusIcon round size={iconSize} />
+          <GooglePlusShareCount url={url}>{count => renderShareCount(count)}</GooglePlusShareCount>
+        </GooglePlusShareButton>
+      </StyledDiv>
     );
   }
 }
