@@ -62,9 +62,7 @@ class BlogLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         <Header />
-        <Main role="main">
-          {children}
-        </Main>
+        <Main role="main">{children}</Main>
         <Footer />
       </div>
     );

@@ -1,26 +1,37 @@
-# gatsby-starter-default
-The default Gatsby starter.
+<img src="https://i.imgur.com/N4O07o7.png" alt="manoz banner"/>
+<br />
+<div align="center">
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+[![version]][version] [![licenses][licenses]][licenses-url]
 
-## Install
+[![tests][tests]][tests-url]
+[![deps][deps]][deps-url]
+[![deps-dev][deps-dev]][deps-dev-url]
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+Website: [http://k-legrand.com](http://k-legrand.com)
+</div>
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+## 🤖 Introduction
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-gatsby develop
-```
+This is my own website. Yep o/
 
-## Deploy
+It was built with Gatsby and fueled with a lot of caffeine. I used a starter template at first and finally, changes after changes I've reworked almost everything.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Manoz/k-legrand.com)
+Feel free to use whatever you want on this repo ❤️
+
+# License
+Released under the [MIT](./LICENSE) license.
+
+[tests]: https://travis-ci.org/Manoz/purr-react.svg?branch=master
+[tests-url]: https://travis-ci.org/Manoz/purr-react
+
+[deps]: https://david-dm.org/manoz/purr-react/status.svg
+[deps-url]: https://david-dm.org/manoz/purr-react
+
+[deps-dev]: https://david-dm.org/manoz/purr-react/dev-status.svg
+[deps-dev-url]: https://david-dm.org/manoz/purr-react?type=dev
+
+[licenses-url]: https://github.com/Manoz/purr-react/blob/master/LICENSE
+[licenses]: https://img.shields.io/badge/license-MIT-blue.svg
+
+[version]: https://img.shields.io/badge/version-2.0.0-%23d85a94.svg

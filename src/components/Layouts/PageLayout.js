@@ -24,9 +24,7 @@ class PageLayout extends React.Component {
       <div className="wrapper">
         <IndexSEO customTitle={pageSEO ? true : null} />
         <Header />
-        <Main role="main">
-          {children}
-        </Main>
+        <Main role="main">{children}</Main>
         <Footer />
       </div>
     );
