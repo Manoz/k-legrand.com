@@ -50,13 +50,18 @@ class IndexSEO extends React.Component {
         <meta property="og:image" content={screenshot} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ''} />
+        <meta
+          name="twitter:creator"
+          content={config.userTwitter ? config.userTwitter : ''}
+        />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:url" content={config.siteUrl} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={screenshot} />
 
-        <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script>
       </Helmet>
     );
   }

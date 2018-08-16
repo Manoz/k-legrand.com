@@ -34,7 +34,10 @@ class Blog extends React.Component {
         <Container>
           <Helmet>
             <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
             <link rel="shortcut icon" href={favicon} />
             <meta name="description" content={description} />
             <meta name="image" content={screenshot} />
@@ -46,15 +49,23 @@ class Blog extends React.Component {
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={screenshot} />
-            <meta property="fb:app_id" content={config.siteFBAppID ? config.siteFBAppID : ''} />
+            <meta
+              property="fb:app_id"
+              content={config.siteFBAppID ? config.siteFBAppID : ''}
+            />
 
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ''} />
+            <meta
+              name="twitter:creator"
+              content={config.userTwitter ? config.userTwitter : ''}
+            />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={screenshot} />
 
-            <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+            <script type="application/ld+json">
+              {JSON.stringify(schemaOrgJSONLD)}
+            </script>
           </Helmet>
           <UserBio />
           <PostListing postEdges={postEdges} />
@@ -66,7 +77,10 @@ class Blog extends React.Component {
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allMarkdownRemark(limit: 2000, sort: { fields: [fields___date], order: DESC }) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [fields___date], order: DESC }
+    ) {
       edges {
         node {
           fields {

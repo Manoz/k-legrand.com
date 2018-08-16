@@ -8,7 +8,7 @@ import StyledLink from './styles/StyledLink';
 class PostListing extends React.Component {
   getPostList() {
     const postList = [];
-    this.props.postEdges.forEach((postEdge) => {
+    this.props.postEdges.forEach(postEdge => {
       postList.push({
         path: `blog${postEdge.node.fields.slug}`,
         tags: postEdge.node.frontmatter.tags,

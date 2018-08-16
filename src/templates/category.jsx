@@ -16,10 +16,13 @@ class CategoryTemplate extends React.Component {
     return (
       <BlogLayout location={this.props.location}>
         <Container>
-          <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
+          <Helmet
+            title={`Posts in category "${category}" | ${config.siteTitle}`}
+          />
           <UserBio />
           <h2 style={{ marginBottom: '3rem' }}>
-            Posts in category <span style={{ fontWeight: '400' }}>{category}</span>:
+            Posts in category{' '}
+            <span style={{ fontWeight: '400' }}>{category}</span>:
           </h2>
           <PostListing postEdges={postEdges} />
         </Container>

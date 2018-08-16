@@ -48,7 +48,8 @@ class Hero extends React.Component {
                 textAlign: 'center',
               }}
             >
-              Ahoy! My name is <span style={{ fontWeight: '300' }}>Kevin Legrand</span>
+              Ahoy! My name is{' '}
+              <span style={{ fontWeight: '300' }}>Kevin Legrand</span>
               <br />
               <span
                 style={{

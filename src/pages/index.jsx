@@ -27,7 +27,13 @@ configureAnchors({
 const H3 = styled.h3`
   margin-bottom: 1.5rem;
   font-weight: 300;
-  background-image: -webkit-gradient(linear, 0% 0%, 25% 100%, from(#387cc6), to(#c23ffd));
+  background-image: -webkit-gradient(
+    linear,
+    0% 0%,
+    25% 100%,
+    from(#387cc6),
+    to(#c23ffd)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -117,22 +123,26 @@ class IndexPage extends React.Component {
               <header style={{ marginBottom: '24px' }}>
                 <H3>What I do</H3>
                 <Blockquote>
-                  I hear and I forget. I see and I remember. I do and I understand.
+                  I hear and I forget. I see and I remember. I do and I
+                  understand.
                   <Cite>— Confucius</Cite>
                 </Blockquote>
               </header>
               <div>
                 <p>
-                  Most of my time I am building websites for my clients or for me. Usually simple
-                  responsive websites with SCSS, WordPress and some Javascript.
+                  Most of my time I am building websites for my clients or for
+                  me. Usually simple responsive websites with SCSS, WordPress
+                  and some Javascript.
                 </p>
 
                 <p>
-                  In my spare time I am building other things like nodejs apps or more recently
-                  Facebook apps.
+                  In my spare time I am building other things like nodejs apps
+                  or more recently Facebook apps.
                 </p>
 
-                <p>Sometime I also write articles about design and development.</p>
+                <p>
+                  Sometime I also write articles about design and development.
+                </p>
               </div>
             </Section>
           </ScrollableAnchor>
@@ -142,15 +152,17 @@ class IndexPage extends React.Component {
               <header style={{ marginBottom: '24px' }}>
                 <H3>What I learn(ed)</H3>
                 <Blockquote>
-                  Tell me and I forget. Teach me and I remember. Involve me and I learn.
+                  Tell me and I forget. Teach me and I remember. Involve me and
+                  I learn.
                   <Cite>— Benjamin Franklin</Cite>
                 </Blockquote>
               </header>
               <div>
                 <p>
-                  <strong>Known:</strong> HTML5, CSS3, SCSS, LESS, Bootstrap, WordPress,
-                  WooCommerce, Prestashop, MySQL, GIT, SSH, Bash, Javascript, React, jQuery, Adobe
-                  Photoshop, Adobe Illustrator, Adobe Lightroom, Adobe After Effect, Cinema 4D,
+                  <strong>Known:</strong> HTML5, CSS3, SCSS, LESS, Bootstrap,
+                  WordPress, WooCommerce, Prestashop, MySQL, GIT, SSH, Bash,
+                  Javascript, React, jQuery, Adobe Photoshop, Adobe Illustrator,
+                  Adobe Lightroom, Adobe After Effect, Cinema 4D,
                   <span
                     title="Shhhht"
                     style={{
@@ -166,7 +178,8 @@ class IndexPage extends React.Component {
                 </p>
 
                 <p>
-                  <strong>Improving:</strong> ECMAScript 6/7, Gatsby, Facebook Messenger Bots, VueJS
+                  <strong>Improving:</strong> ECMAScript 6/7, Gatsby, Facebook
+                  Messenger Bots, VueJS
                 </p>
               </div>
             </Section>
@@ -177,16 +190,17 @@ class IndexPage extends React.Component {
               <header style={{ marginBottom: '24px' }}>
                 <H3>Who are my clients</H3>
                 <Blockquote>
-                  A doctor can bury his mistakes but an architect can only advise his clients to
-                  plant vines.
+                  A doctor can bury his mistakes but an architect can only
+                  advise his clients to plant vines.
                   <Cite>— Frank Lloyd Wright</Cite>
                 </Blockquote>
               </header>
               <div>
                 <p>
-                  The Internets, Dodie, Faim de Lyon, Club des CML, Footengo, Michel Bastos, Otako,
-                  Écoute Prolongée, FNAQPA, Éclat de Verre, Fél&apos;Ain, Darty, Charal, Hépar, Les
-                  Portes du Soleil, April
+                  The Internets, Dodie, Faim de Lyon, Club des CML, Footengo,
+                  Michel Bastos, Otako, Écoute Prolongée, FNAQPA, Éclat de
+                  Verre, Fél&apos;Ain, Darty, Charal, Hépar, Les Portes du
+                  Soleil, April
                 </p>
               </div>
             </Section>
@@ -197,13 +211,17 @@ class IndexPage extends React.Component {
               <header style={{ marginBottom: '24px' }}>
                 <H3>Where I am</H3>
                 <Blockquote>
-                  The only thing there is in the community, is the illusion of being together
+                  The only thing there is in the community, is the illusion of
+                  being together
                   <Cite>— Unknown</Cite>
                 </Blockquote>
               </header>
               <div>
                 <p>
-                  <StyledA href="https://www.facebook.com/lboldair" target="_blank">
+                  <StyledA
+                    href="https://www.facebook.com/lboldair"
+                    target="_blank"
+                  >
                     Facebook
                   </StyledA>
                   <StyledA href="https://www.twitter.com/manoz" target="_blank">
@@ -212,13 +230,22 @@ class IndexPage extends React.Component {
                   <StyledA href="https://github.com/manoz" target="_blank">
                     Github
                   </StyledA>
-                  <StyledA href="https://www.instagram.com/manoz_" target="_blank">
+                  <StyledA
+                    href="https://www.instagram.com/manoz_"
+                    target="_blank"
+                  >
                     Instagram
                   </StyledA>
-                  <StyledA href="https://fr.linkedin.com/in/klegr" target="_blank">
+                  <StyledA
+                    href="https://fr.linkedin.com/in/klegr"
+                    target="_blank"
+                  >
                     LinkedIn
                   </StyledA>
-                  <StyledA href="http://stackoverflow.com/users/3272666/manoz" target="_blank">
+                  <StyledA
+                    href="http://stackoverflow.com/users/3272666/manoz"
+                    target="_blank"
+                  >
                     Stackoverflow
                   </StyledA>
                   <StyledA href="http://codepen.io/Manoz" target="_blank">
@@ -234,7 +261,8 @@ class IndexPage extends React.Component {
               <header style={{ marginBottom: '24px' }}>
                 <H3>Hire me</H3>
                 <Blockquote>
-                  If you refuse to discuss with the fools, you not discuss with anyone
+                  If you refuse to discuss with the fools, you not discuss with
+                  anyone
                   <Cite>— Unknown</Cite>
                 </Blockquote>
               </header>

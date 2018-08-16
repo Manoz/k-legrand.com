@@ -43,7 +43,8 @@ const HeroWrapper = styled.div`
 
     &::after {
       border-bottom-color: #c23ffd;
-      transition: border-color 0s ease-out 1s, width 0.6s ease-out 1s, height 0.6s ease-out 1.75s;
+      transition: border-color 0s ease-out 1s, width 0.6s ease-out 1s,
+        height 0.6s ease-out 1.75s;
     }
   }
 `;

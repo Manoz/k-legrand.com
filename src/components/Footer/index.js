@@ -18,7 +18,11 @@ const Footer = () => (
             Copyright &copy; 2018 - Kevin Legrand
             <Img style={{ width: '16px' }} src={coffee} alt="Icon Coffee" />
             &nbsp; Fueled with{' '}
-            <A href="https://en.wikipedia.org/wiki/Caffeine" title="Caffeine" target="_blank">
+            <A
+              href="https://en.wikipedia.org/wiki/Caffeine"
+              title="Caffeine"
+              target="_blank"
+            >
               C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>
             </A>
           </P>

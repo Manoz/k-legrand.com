@@ -44,7 +44,9 @@ class SocialLinks extends React.Component {
     const url = urljoin(config.blogUrl, pathPrefix, postPath);
     const iconSize = mobile ? 32 : 36;
     const filter = count => (count > 0 ? count : '');
-    const renderShareCount = count => <div className="share-count">{filter(count)}</div>;
+    const renderShareCount = count => (
+      <div className="share-count">{filter(count)}</div>
+    );
 
     return (
       <StyledDiv className="social-links">
@@ -53,15 +55,21 @@ class SocialLinks extends React.Component {
         </TwitterShareButton>
         <FacebookShareButton url={url} quote={postNode.excerpt}>
           <FacebookIcon round size={iconSize} />
-          <FacebookShareCount url={url}>{count => renderShareCount(count)}</FacebookShareCount>
+          <FacebookShareCount url={url}>
+            {count => renderShareCount(count)}
+          </FacebookShareCount>
         </FacebookShareButton>
         <RedditShareButton url={url} title={post.title}>
           <RedditIcon round size={iconSize} />
-          <RedditShareCount url={url}>{count => renderShareCount(count)}</RedditShareCount>
+          <RedditShareCount url={url}>
+            {count => renderShareCount(count)}
+          </RedditShareCount>
         </RedditShareButton>
         <GooglePlusShareButton url={url}>
           <GooglePlusIcon round size={iconSize} />
-          <GooglePlusShareCount url={url}>{count => renderShareCount(count)}</GooglePlusShareCount>
+          <GooglePlusShareCount url={url}>
+            {count => renderShareCount(count)}
+          </GooglePlusShareCount>
         </GooglePlusShareButton>
       </StyledDiv>
     );

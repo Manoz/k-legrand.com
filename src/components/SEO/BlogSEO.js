@@ -13,7 +13,9 @@ class BlogSEO extends React.Component {
     const postMeta = postNode.frontmatter;
 
     const title = postMeta.title;
-    const description = postMeta.description ? postMeta.description : postNode.excerpt;
+    const description = postMeta.description
+      ? postMeta.description
+      : postNode.excerpt;
     const postURL = urljoin(config.blogUrl, config.pathPrefix, postPath);
     const image = urljoin(config.blogUrl, config.pathPrefix, postMeta.cover);
     const blogURL = urljoin(config.blogUrl, config.pathPrefix);
@@ -74,15 +76,23 @@ class BlogSEO extends React.Component {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
-        <meta property="fb:app_id" content={config.siteFBAppID ? config.siteFBAppID : ''} />
+        <meta
+          property="fb:app_id"
+          content={config.siteFBAppID ? config.siteFBAppID : ''}
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ''} />
+        <meta
+          name="twitter:creator"
+          content={config.userTwitter ? config.userTwitter : ''}
+        />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
 
-        <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSONLD)}
+        </script>
       </Helmet>
     );
   }
