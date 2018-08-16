@@ -7,7 +7,7 @@
  * @param {string} fontWeight any font-weight (default: normal)
  * @param {string} fontStyle any font-style (default: normal)
  * @return {string} Return the complete css
-*/
+ */
 function fontFace(name, src, fontWeight = 'normal', fontStyle = 'normal') {
   return `
     @font-face{

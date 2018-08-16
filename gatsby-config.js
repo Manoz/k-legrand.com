@@ -10,12 +10,20 @@ module.exports = {
     titleAlt: config.siteTitleAlt,
     description: config.siteDescription,
     siteUrl: urljoin(config.siteUrl, pathPrefix),
-    image_url: `${urljoin(
-      config.siteUrl,
-      pathPrefix
-    )}${config.siteLogo}`,
+    image_url: `${urljoin(config.siteUrl, pathPrefix)}${config.siteLogo}`,
+
+    // rssMetadata: {
+    //   site_url: urljoin(config.blogUrl, pathPrefix),
+    //   feed_url: urljoin(config.blogUrl, pathPrefix, config.siteRss),
+    //   title: config.blogTitle,
+    //   description: config.blogDescription,
+    //   image_url: `${urljoin(config.blogUrl, pathPrefix)}${config.siteLogo}`,
+    //   author: config.userName,
+    //   copyright: config.copyright,
+    // },
   },
   plugins: [
+    'gatsby-plugin-lodash',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
@@ -34,6 +42,45 @@ module.exports = {
       options: {
         name: 'assets',
         path: `${__dirname}/static/assets/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.siteGATrackingID,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 920,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+          },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-autolink-headers',
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: config.themeColor,
+        showSpinner: false,
       },
     },
     {
@@ -76,7 +123,13 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-twitter',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
   ],
 };
 

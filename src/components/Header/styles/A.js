@@ -5,11 +5,14 @@ const A = styled.a`
   color: white !important;
   flex: 0 0 auto;
   align-self: center;
-  color: white !important;
   line-height: 1;
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 15px;
+
+    @media (min-width: 992px) {
+      margin-right: 20px;
+    }
   }
 
   &:hover {

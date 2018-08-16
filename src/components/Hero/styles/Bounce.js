@@ -37,7 +37,7 @@ const Bounce = styled.div`
   &.loaded {
     opacity: 1;
     visibility: visible;
-    transition: opacity .1s linear;
+    transition: opacity 0.1s linear;
     transition-delay: 0s;
     transition-delay: 1.12s;
   }

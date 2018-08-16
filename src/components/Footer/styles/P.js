@@ -5,8 +5,13 @@ const P = styled.p`
   display: flex;
   align-items: center;
   font-family: 'Roboto', sans-serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.71429;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    text-align: left;
+  }
 `;
 
 export default P;

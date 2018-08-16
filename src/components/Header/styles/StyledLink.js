@@ -10,13 +10,17 @@ const StyledLink = styled(Link)`
   color: #ed6eae !important;
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 15px;
+
+    @media (min-width: 992px) {
+      margin-right: 20px;
+    }
   }
 
   &:hover {
     color: var(--colorPink) !important;
     text-decoration: none !important;
-    transition: color .2s !important;
+    transition: color 0.2s !important;
   }
 
   img {
