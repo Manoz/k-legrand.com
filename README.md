@@ -22,8 +22,8 @@ Feel free to use whatever you want on this repo ❤️
 # License
 Released under the [MIT](./LICENSE) license.
 
-[tests]: https://travis-ci.com/Manoz/k-legrand.com.svg?branch=master
-[tests-url]: https://travis-ci.com/Manoz/k-legrand.com
+[tests]: https://travis-ci.org/Manoz/k-legrand.com.svg?branch=master
+[tests-url]: https://travis-ci.org/Manoz/k-legrand.com
 
 [deps]: https://david-dm.org/manoz/k-legrand.com/status.svg
 [deps-url]: https://david-dm.org/manoz/k-legrand.com
