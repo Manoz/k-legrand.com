@@ -35,6 +35,7 @@ const H3 = styled.h3`
     to(#c23ffd)
   );
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
 
