@@ -4,13 +4,11 @@
     "airbnb-base",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:flowtype/recommended",
     "plugin:react/recommended",
     "prettier",
-    "prettier/flowtype",
     "prettier/react"
   ],
-  "plugins": ["flowtype", "react"],
+  "plugins": ["react"],
   "env": {
     "node": true,
     "es6": true,
