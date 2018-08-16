@@ -1,3 +1,4 @@
+/* stylelint-disable property-no-vendor-prefix */
 import React from 'react';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import styled from 'styled-components';
