@@ -145,6 +145,10 @@ injectGlobal`
       letter-spacing: -.004em;
     }
 
+    p {
+      margin-top: 0;
+    }
+
     li {
       font-size: 21px;
       line-height: 1.5;

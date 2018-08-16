@@ -11,13 +11,17 @@ const StyledSection = styled.section`
 
 const Col = styled.div`
   padding-bottom: 60px;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
   flex-basis: 90%;
   flex-grow: 0;
   flex-shrink: 0;
-  max-width: 90%;
+  width: 100%;
   border-bottom: 2px dotted #387cc6;
+
+  @media (min-width: 992px) {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    width: 90%;
+  }
 `;
 
 const Section = ({ children }) => (

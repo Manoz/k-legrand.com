@@ -1,11 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import IndexSEO from '../SEO/IndexSEO';
 import Header from '../Header';
 import Footer from '../Footer';
 
 import '../styles';
+
+const Main = styled.main`
+  margin-top: 85px;
+
+  @media (min-width: 768px) {
+    margin-top: 120px;
+  }
+`;
 
 class PageLayout extends React.Component {
   render() {
@@ -15,9 +24,9 @@ class PageLayout extends React.Component {
       <div className="wrapper">
         <IndexSEO customTitle={pageSEO ? true : null} />
         <Header />
-        <main style={{ marginTop: '120px' }} role="main">
+        <Main role="main">
           {children}
-        </main>
+        </Main>
         <Footer />
       </div>
     );

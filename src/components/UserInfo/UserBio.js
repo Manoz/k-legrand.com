@@ -7,16 +7,27 @@ const BioContainer = styled.div`
   display: flex;
   margin: 0 auto;
   flex-flow: row nowrap;
-  max-width: 82%;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 82%;
+  }
 `;
 
 const Img = styled.img`
+  display: none;
   margin-right: 0.875rem;
   border-radius: 100%;
   border: 4px solid #ebebeb;
-  width: 64px;
-  height: 64px;
+  width: 54px;
+  height: 54px;
   transition: box-shadow 0.2s ease;
+
+  @media (min-width: 768px) {
+    display: block;
+    width: 64px;
+    height: 64px;
+  }
 
   &:hover {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);

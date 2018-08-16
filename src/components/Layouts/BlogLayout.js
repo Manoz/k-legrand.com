@@ -1,10 +1,19 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import Header from '../Header';
 import Footer from '../Footer';
 import config from '../../../config/SiteConfig';
+
+const Main = styled.main`
+  margin-top: 85px;
+
+  @media (min-width: 768px) {
+    margin-top: 120px;
+  }
+`;
 
 class BlogLayout extends React.Component {
   getLocalTitle() {
@@ -53,9 +62,9 @@ class BlogLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         <Header />
-        <main style={{ marginTop: '120px' }} role="main">
+        <Main role="main">
           {children}
-        </main>
+        </Main>
         <Footer />
       </div>
     );

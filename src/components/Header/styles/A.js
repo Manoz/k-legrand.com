@@ -9,7 +9,11 @@ const A = styled.a`
   line-height: 1;
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 15px;
+
+    @media (min-width: 992px) {
+      margin-right: 20px;
+    }
   }
 
   &:hover {
