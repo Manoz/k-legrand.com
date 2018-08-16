@@ -10,7 +10,6 @@ sudo: required
 jobs:
     include:
         - stage: build and test
-          if: type = pull_request
           language: node_js
           node_js:
             - '8'
