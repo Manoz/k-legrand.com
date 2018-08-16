@@ -129,6 +129,7 @@ module.exports = {
     'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
   ],
 };
 
