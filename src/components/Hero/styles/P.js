@@ -8,7 +8,6 @@ const P = styled.p`
   line-height: 1.2;
   font-weight: 100;
   background: linear-gradient(#387cc6, #c23ffd);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
