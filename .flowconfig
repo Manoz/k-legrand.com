@@ -1,0 +1,8 @@
+[version]
+0.78.0
+
+[ignore]
+.*/node_modules/fbjs/.*
+.*/node_modules/react-side-effect/.*
+.*/node_modules/styled-components/.*
+.*/node_modules/typography/.*

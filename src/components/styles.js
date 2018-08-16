@@ -38,24 +38,22 @@ injectGlobal`
     font-size: 20px;
     line-height: 1.4;
     text-rendering: optimizeLegibility;
-    -moz-font-feature-settings: "liga" on;
   }
 
-  a, a:link, a:visited {
+  a, a:visited {
     color: #387CC6;
     text-decoration: none;
     transition: color .2s;
+  }
 
-    &:hover {
-      color: #001f3f;
-      text-decoration: underline;
-      transition: color .2s;
-    }
+  a:hover {
+    color: #001f3f;
+    text-decoration: underline;
+    transition: color .2s;
+  }
 
-    &:active,
-    &:hover {
-      outline: none;
-    }
+  a:active {
+    outline: none;
   }
 
   h1, h2, h3, h4, h5, h6 {

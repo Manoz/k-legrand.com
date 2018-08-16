@@ -5,7 +5,6 @@ const A = styled.a`
   color: white !important;
   flex: 0 0 auto;
   align-self: center;
-  color: white !important;
   line-height: 1;
 
   &:not(:last-child) {
