@@ -1,17 +1,21 @@
 {
   "name": "k-legrand.com",
-  "version": "2.0.0",
-  "description": "My website powered by Gatsby v2",
+  "version": "2.0.1",
+  "description": "My website powered by Gatsby ❤️",
   "author": {
     "name": "Kevin Legrand",
     "email": "legrd.kevin@gmail.com",
     "url": "http://k-legrand.com"
   },
+  "homepage": "http://k-legrand.com",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/Manoz/k-legrand.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Manoz/k-legrand.com/issues"
   },
   "keywords": [
     "gatsby"

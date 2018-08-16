@@ -2,7 +2,7 @@
 <br />
 <div align="center">
 
-[![version]][version] [![licenses][licenses]][licenses-url]
+[![version]][version] [![licenses][licenses]][licenses-url] [![pr]][pr]
 
 [![tests][tests]][tests-url]
 [![deps][deps]][deps-url]
@@ -31,7 +31,9 @@ Released under the [MIT](./LICENSE) license.
 [deps-dev]: https://david-dm.org/manoz/k-legrand.com/dev-status.svg
 [deps-dev-url]: https://david-dm.org/manoz/k-legrand.com?type=dev
 
-[licenses-url]: https://github.com/Manoz/k-legrand.com/blob/master/LICENSE
 [licenses]: https://img.shields.io/badge/license-MIT-blue.svg
+[licenses-url]: https://github.com/Manoz/k-legrand.com/blob/master/LICENSE
 
-[version]: https://img.shields.io/badge/version-2.0.0-%23d85a94.svg
+[version]: https://img.shields.io/badge/version-2.0.1-%23d85a94.svg
+
+[pr]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
