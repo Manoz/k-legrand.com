@@ -37,7 +37,7 @@
     "lint:css": "stylelint './src/**/*.{js,jsx}'",
     "lint:js": "npm run lint:eslint -- . ",
     "lint:eslint": "eslint --ignore-path .eslintignore",
-    "open:build": "node config/distServer.js",
+    "open:build": "npm run build && node config/distServer.js",
     "postformat": "npm run lint",
     "prebuild": "rimraf ./public && rimraf .cache",
     "test": "npm-run-all -s lint jest",
