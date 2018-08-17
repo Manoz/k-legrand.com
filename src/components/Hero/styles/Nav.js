@@ -18,28 +18,10 @@ const A = styled.a`
 `;
 
 class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isToggledOn: false };
-
-    this.toggleClass = this.toggleClass.bind(this);
-  }
-
-  toggleClass() {
-    const currentState = this.state.isToggledOn;
-    this.setState({ isToggledOn: !currentState });
-  }
-
   render() {
     return (
       <nav style={{ textAlign: 'center' }}>
-        <A
-          onClick={this.toggleClass}
-          className={this.state.isToggledOn ? 'toto active' : 'toto'}
-          href="#ido"
-        >
-          #what I do
-        </A>
+        <A href="#ido" > #what I do</A>
         <A href="#ilearned">#what I learned</A>
         <A href="#clients">#who are my clients</A>
         <A href="#where">#where I am</A>
