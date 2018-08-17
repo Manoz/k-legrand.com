@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import P from './styles/P';
-import Nav from './styles/Nav';
+// import Nav from './styles/Nav';
 import Bounce from './styles/Bounce';
 import HeroWrapper from './styles/HeroWrapper';
 
@@ -37,6 +37,10 @@ class Hero extends React.Component {
   render() {
     const { didMount } = this.state;
 
+    function toto(e) {
+      e.preventDefault();
+    }
+
     return (
       <div style={{ position: 'relative' }}>
         <HeroWrapper className={`${didMount && 'loaded'}`}>
@@ -45,6 +49,7 @@ class Hero extends React.Component {
               style={{
                 fontFamily: 'var(--fontTitle)',
                 fontWeight: '200',
+                marginTop: '0',
                 textAlign: 'center',
               }}
             >
@@ -60,15 +65,17 @@ class Hero extends React.Component {
                 I&apos;m a french front end developer
               </span>
             </P>
-            <Nav />
+            {/* <Nav /> */}
           </div>
         </HeroWrapper>
         <div className="arrow">
           <Bounce className={`${didMount && 'loaded'}`}>
             <a
+              onClick={toto}
               style={{
                 display: 'inline-block',
                 padding: '9px',
+                cursor: 'default',
               }}
               href="#ido"
               title="Do a barrel scroll"

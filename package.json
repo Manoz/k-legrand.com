@@ -75,7 +75,6 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
-    "react-scrollable-anchor": "^0.6.1",
     "react-share": "^2.2.0",
     "react-twitter-widgets": "^1.7.1",
     "sanitize.css": "^6.0.0",
