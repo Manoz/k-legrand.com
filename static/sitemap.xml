@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>http://k-legrand.com/</loc>
+    <lastmod>2018-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://k-legrand.com/about/</loc>
+    <lastmod>2018-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://k-legrand.com/blog/</loc>
+    <lastmod>2018-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://k-legrand.com/blog/let-start-new-life/</loc>
+    <lastmod>2018-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>http://k-legrand.com/blog/tags/lifestyle/</loc>
+    <lastmod>2018-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
+<!--<guid value="bf23d537-b9c5-4de8-9b23-11bf53719328" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

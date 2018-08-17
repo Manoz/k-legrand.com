@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://k-legrand.com/sitemap.xml

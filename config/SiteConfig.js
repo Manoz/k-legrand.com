@@ -8,13 +8,13 @@ module.exports = {
   siteLanguage: 'en',
   siteDescription: 'Développeur front end basé en Rhône Alpes à Lyon et Bourg-en-Bresse',
 
-  blogUrl: 'http://blog.k-legrand.com',
+  blogUrl: 'http://k-legrand.com/blog',
   blogTitle: 'Manoz | Blog',
   blogDescription: 'The blog of a guy who has a very clear opinion.',
   siteRss: '/rss.xml',
   userName: 'Manoz',
   userAvatar: 'https://secure.gravatar.com/avatar/ef560d79761c5626beaa014c4beed5c8?size=512',
-  userDescription: 'Yeah, I like animals better than people sometimes... Especially cats. Cats are the best. Every time you come home, they act like they haven\'t seen you in a year. And the good thing about cats... is they got different cats for different people.',
+  userDescription: 'My name is Kevin a.k.a Manoz. I am a front-end developer who lives in Lyon, France. I work in a web agency who builds websites using Laravel, React or WordPress depending on our clients.',
   userLinks: [
     {
       label: 'GitHub',
