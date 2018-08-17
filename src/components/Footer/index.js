@@ -18,6 +18,7 @@ const Footer = () => (
             <Img style={{ width: '16px' }} src={coffee} alt="Icon Coffee" />
             &nbsp; Fueled with{' '}
             <a
+              rel="noopener"
               href="https://en.wikipedia.org/wiki/Caffeine"
               title="Caffeine"
               target="_blank"
@@ -29,7 +30,7 @@ const Footer = () => (
         <Div primary>
           <P>
             Built with ❤️ using
-            <a title="Gatsbyjs" href="https://next.gatsbyjs.org/">
+            <a rel="noopener" title="Gatsbyjs" href="https://next.gatsbyjs.org/">
               <Img style={{ width: '16px' }} src={gatsby} alt="Icon Gatsby" />
             </a>
           </P>

@@ -205,36 +205,40 @@ class IndexPage extends React.Component {
             <div>
               <p>
                 <StyledA
+                  rel="noopener"
                   href="https://www.facebook.com/lboldair"
                   target="_blank"
                 >
                   Facebook
                 </StyledA>
-                <StyledA href="https://www.twitter.com/manoz" target="_blank">
+                <StyledA rel="noopener" href="https://www.twitter.com/manoz" target="_blank">
                   Twitter
                 </StyledA>
-                <StyledA href="https://github.com/manoz" target="_blank">
+                <StyledA rel="noopener" href="https://github.com/manoz" target="_blank">
                   Github
                 </StyledA>
                 <StyledA
+                  rel="noopener"
                   href="https://www.instagram.com/manoz_"
                   target="_blank"
                 >
                   Instagram
                 </StyledA>
                 <StyledA
+                  rel="noopener"
                   href="https://fr.linkedin.com/in/klegr"
                   target="_blank"
                 >
                   LinkedIn
                 </StyledA>
                 <StyledA
+                  rel="noopener"
                   href="http://stackoverflow.com/users/3272666/manoz"
                   target="_blank"
                 >
                   Stackoverflow
                 </StyledA>
-                <StyledA href="http://codepen.io/Manoz" target="_blank">
+                <StyledA rel="noopener" href="http://codepen.io/Manoz" target="_blank">
                   Codepen
                 </StyledA>
               </p>

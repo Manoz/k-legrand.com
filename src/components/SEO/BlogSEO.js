@@ -62,6 +62,7 @@ class BlogSEO extends React.Component {
     }
     return (
       <Helmet>
+        <html lang="en-US" amp />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href={favicon} />

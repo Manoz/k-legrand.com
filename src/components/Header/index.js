@@ -11,7 +11,7 @@ import RightElements from './styles/RightElements';
 class Header extends React.Component {
   render() {
     const TheLink = props => (
-      <A title={props.thetitle} target="_blank" href={props.theurl}>
+      <A rel="noopener" title={props.thetitle} target="_blank" href={props.theurl}>
         <i className={`icn ${props.icon}`} />
       </A>
     );

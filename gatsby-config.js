@@ -93,11 +93,11 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.siteTitle,
-        short_name: config.siteTitleAlt,
+        short_name: 'Manoz',
         description: config.siteDescription,
         start_url: config.pathPrefix,
         theme_color: config.themeColor,
-        background_color: config.backgroundColor,
+        background_color: '#fff',
         display: 'minimal-ui',
         icons: [
           {

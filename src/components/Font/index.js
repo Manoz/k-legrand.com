@@ -19,6 +19,7 @@ function fontFace(name, src, fontWeight = 'normal', fontStyle = 'normal') {
           url(${require(`./fonts/${src}.svg`)}#${name}) format("svg");
       font-style: ${fontStyle};
       font-weight: ${fontWeight};
+      font-display: swap;
     }
 
     [class^="icn-"],
