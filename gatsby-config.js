@@ -97,7 +97,7 @@ module.exports = {
         description: config.siteDescription,
         start_url: config.pathPrefix,
         theme_color: config.themeColor,
-        background_color: config.backgroundColor,
+        background_color: '#fff',
         display: 'minimal-ui',
         icons: [
           {
