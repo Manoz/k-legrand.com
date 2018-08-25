@@ -5719,9 +5719,9 @@ gatsby-plugin-catch-links@^2.0.2-rc.0:
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
-gatsby-plugin-eslint-v2@next:
-  version "2.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint-v2/-/gatsby-plugin-eslint-v2-2.0.0-beta.1.tgz#ae7574ceff43b357fefa1ac5c84c7ee1dde8ab07"
+gatsby-plugin-eslint@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.1.tgz#88641be50b95a867416878c43b64458a2d6b9c21"
 
 gatsby-plugin-feed@^2.0.0-rc.0:
   version "2.0.0-rc.0"
