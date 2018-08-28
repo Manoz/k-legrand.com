@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class UserLinks extends Component {
+class UserLinks extends React.Component {
   getLinkElements() {
     const { userLinks } = this.props.config;
     const { labeled } = this.props;
