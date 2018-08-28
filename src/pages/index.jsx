@@ -3,9 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Commented lines below are an example on how to async load a component
-
-// import 'babel-polyfill';
-
 // import asyncComponent from '../components/AsyncComponent';
 
 // const Hero = asyncComponent(() => import('../components/Hero'));

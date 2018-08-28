@@ -27,7 +27,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-plugin-eslint-v2',
+      resolve: 'gatsby-plugin-eslint',
       options: {
         test: /\.js$|\.jsx$/,
         exclude: /(node_modules|cache|public)/,
