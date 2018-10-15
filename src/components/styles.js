@@ -1,14 +1,17 @@
-/* eslint no-unused-expressions: 0 */
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import sanitizeCss from '!raw-loader!sanitize.css/sanitize.css'; // eslint-disable-line
 import fontFace from './Font';
 
-injectGlobal`${sanitizeCss}`;
+export const SanitizeCss = createGlobalStyle`
+  ${sanitizeCss}
+`;
 
-injectGlobal`
+export const IconsFont = createGlobalStyle`
   ${fontFace('manoz', 'manoz', 'normal', 'normal')}
+`;
 
+export const GlobalStyles = createGlobalStyle`
   :root {
     --primaryColor: #ebebeb;
     --secondaryColor: #d85a94;

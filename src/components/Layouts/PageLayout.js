@@ -6,7 +6,7 @@ import IndexSEO from '../SEO/IndexSEO';
 import Header from '../Header';
 import Footer from '../Footer';
 
-import '../styles';
+import { IconsFont, GlobalStyles, SanitizeCss } from '../styles';
 
 const Main = styled.main`
   margin-top: 85px;
@@ -22,6 +22,9 @@ class PageLayout extends React.Component {
 
     return (
       <div className="wrapper">
+        <SanitizeCss />
+        <IconsFont />
+        <GlobalStyles />
         <IndexSEO customTitle={pageSEO ? true : null} />
         <Header />
         <Main role="main">{children}</Main>
