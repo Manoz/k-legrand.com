@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import Header from '../Header';
 import Footer from '../Footer';
+import { IconsFont, GlobalStyles, SanitizeCss } from '../styles';
 import config from '../../../config/SiteConfig';
 
 const Main = styled.main`
@@ -57,6 +58,9 @@ class BlogLayout extends React.Component {
     const { children } = this.props;
     return (
       <div className="wrapper">
+        <SanitizeCss />
+        <IconsFont />
+        <GlobalStyles />
         <Helmet>
           <title>{`${this.getLocalTitle()} | ${config.siteTitle}`}</title>
           <meta name="description" content={config.siteDescription} />
