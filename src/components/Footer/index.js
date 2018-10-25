@@ -1,12 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import coffee from './images/coffee.svg';
-import gatsby from './images/gatsby.svg';
 import Container from '../Container';
 import Wrapper from './styles/Wrapper';
 import P from './styles/P';
 import Div from './styles/Div';
-import Img from './styles/Img';
+
+const CoffeeIcn = styled.i`
+  margin-left: 6px;
+`;
+
+const GatsbyIcn = styled.i`
+  display: block;
+  margin-left: 6px;
+  font-size: 1rem;
+`;
 
 const Footer = () => (
   <footer style={{ padding: '2em 0' }}>
@@ -15,7 +23,7 @@ const Footer = () => (
         <Div>
           <P style={{ display: 'inline-block' }}>
             Copyright &copy; 2018 - Kevin Legrand
-            <Img style={{ width: '16px' }} src={coffee} alt="Icon Coffee" />
+            <CoffeeIcn className="icn icn-coffee"></CoffeeIcn>
             &nbsp; Fueled with{' '}
             <a
               rel="noopener"
@@ -30,10 +38,10 @@ const Footer = () => (
         <Div primary>
           <P>
             Built with ❤️ using
-            <a rel="noopener" title="Gatsbyjs" href="https://next.gatsbyjs.org/">
-              <Img style={{ width: '16px' }} src={gatsby} alt="Icon Gatsby" />
-            </a>
           </P>
+          <a rel="noopener" title="Gatsbyjs" href="https://next.gatsbyjs.org/">
+            <GatsbyIcn className="icn icn-gatsby"></GatsbyIcn>
+          </a>
         </Div>
       </Wrapper>
     </Container>
