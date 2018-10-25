@@ -8,20 +8,20 @@ dist: trusty
 sudo: required
 
 jobs:
-    include:
-        - stage: build and test
-          language: node_js
-          node_js:
-            - '8'
-            - '9'
-            - '10'
-          cache:
-            yarn: true
-          before_install:
-          - curl -o- -L https://yarnpkg.com/install.sh | bash
-          - export PATH=$HOME/.yarn/bin:$PATH
-          install:
-          - yarn
-          script:
-          - yarn lint
-          - yarn build
+  include:
+    - stage: build and test
+      language: node_js
+      node_js:
+        - '8'
+        - '9'
+        - '10'
+      cache:
+        yarn: true
+      before_install:
+      - curl -o- -L https://yarnpkg.com/install.sh | bash
+      - export PATH=$HOME/.yarn/bin:$PATH
+      install:
+      - yarn
+      script:
+      - yarn lint
+      - yarn build
