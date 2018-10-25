@@ -11,7 +11,7 @@ import RightElements from './styles/RightElements';
 class Header extends React.Component {
   render() {
     const TheLink = props => (
-      <A rel="noopener" title={props.thetitle} target="_blank" href={props.theurl}>
+      <A rel={props.itemRel} title={props.thetitle} target="_blank" href={props.theurl}>
         <i className={`icn ${props.icon}`} />
       </A>
     );
@@ -39,21 +39,31 @@ class Header extends React.Component {
           <RightElements>
             <TheLink
               thetitle="Follow me on Twitter"
+              itemRel="noopener"
               theurl="https://www.twitter.com/manoz"
               icon="icn-twitter"
             />
             <TheLink
+              thetitle="Join me on Mastodon"
+              itemRel="me"
+              theurl="https://mastodon.social/@Manoz"
+              icon="icn-mastodon"
+            />
+            <TheLink
               thetitle="Fork me on Github"
+              itemRel="noopener"
               theurl="https://github.com/manoz"
               icon="icn-github"
             />
             <TheLink
               thetitle="Like me on Instagram"
+              itemRel="noopener"
               theurl="https://www.instagram.com/manoz_/"
               icon="icn-instagram"
             />
             <TheLink
               thetitle="Play with me on Codepen"
+              itemRel="noopener"
               theurl="http://codepen.io/Manoz/"
               icon="icn-codepen"
             />
