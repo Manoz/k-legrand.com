@@ -15,7 +15,7 @@ Website: [http://k-legrand.com](http://k-legrand.com)
 
 This is my own website. Yep o/
 
-It was built with Gatsby and fueled with a lot of caffeine. I used a starter template at first and finally, changes after changes I've reworked almost everything.
+It was built with Gatsby and fueled with a lot of caffeine. I used the default starter template at first and finally, changes after changes I've reworked almost everything.
 
 Feel free to use whatever you want on this repo ❤️
 
