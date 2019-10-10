@@ -134,20 +134,20 @@ module.exports = {
 };
 
 // Used to load css inside our js files using raw-loader
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.modifyWebpackConfig = ({ newConfig, stage }) => {
   if (stage === 'develop' || stage === 'build-javascript') {
     // Load only the raw contents of regular CSS files to support CSS-in-JS
-    config.loader('css', ({ loaders, ...current }) => ({
+    newConfig.loader('css', ({ loaders, ...current }) => ({
       ...current,
       loader: 'raw',
     }));
   } else if (stage === 'build-css') {
     // Regular CSS files shall not be processed in this stage anymore
-    config.loader('css', ({ loaders, ...current }) => ({
+    newConfig.loader('css', ({ loaders, ...current }) => ({
       ...current,
       loader: 'null',
     }));
   }
 
-  return config;
+  return newConfig;
 };

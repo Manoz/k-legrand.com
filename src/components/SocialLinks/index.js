@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   TwitterShareButton,
   RedditShareButton,
   FacebookShareCount,
-  GooglePlusShareCount,
   RedditShareCount,
   FacebookIcon,
   TwitterIcon,
-  GooglePlusIcon,
   RedditIcon,
 } from 'react-share';
 import urljoin from 'url-join';
@@ -65,12 +62,6 @@ class SocialLinks extends React.Component {
             {count => renderShareCount(count)}
           </RedditShareCount>
         </RedditShareButton>
-        <GooglePlusShareButton url={url}>
-          <GooglePlusIcon round size={iconSize} />
-          <GooglePlusShareCount url={url}>
-            {count => renderShareCount(count)}
-          </GooglePlusShareCount>
-        </GooglePlusShareButton>
       </StyledDiv>
     );
   }

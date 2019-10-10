@@ -26,7 +26,7 @@ const Footer = () => (
             <CoffeeIcn className="icn icn-coffee"></CoffeeIcn>
             &nbsp; Fueled with{' '}
             <a
-              rel="noopener"
+              rel="noopener noreferrer"
               href="https://en.wikipedia.org/wiki/Caffeine"
               title="Caffeine"
               target="_blank"
