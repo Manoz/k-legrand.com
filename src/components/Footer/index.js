@@ -36,9 +36,7 @@ const Footer = () => (
           </P>
         </Div>
         <Div primary>
-          <P>
-            Built with ❤️ using
-          </P>
+          <P>Built with ❤️ using</P>
           <a rel="noopener" title="Gatsbyjs" href="https://next.gatsbyjs.org/">
             <GatsbyIcn className="icn icn-gatsby"></GatsbyIcn>
           </a>

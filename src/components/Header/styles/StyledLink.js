@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   display: inline-block;
   padding: 10px 0;
   flex: 0 0 auto;

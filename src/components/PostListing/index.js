@@ -29,7 +29,7 @@ class PostListing extends React.Component {
         {postList.map(post => (
           <ThePost key={post.title}>
             <h3 style={{ marginBottom: '0px' }}>
-              <StyledLink to={post.path} key={post.title}>
+              <StyledLink href={post.path} key={post.title}>
                 {post.title}
               </StyledLink>
             </h3>

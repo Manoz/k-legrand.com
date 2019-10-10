@@ -11,7 +11,12 @@ import RightElements from './styles/RightElements';
 class Header extends React.Component {
   render() {
     const TheLink = props => (
-      <A rel={props.itemRel} title={props.thetitle} target="_blank" href={props.theurl}>
+      <A
+        rel={props.itemRel}
+        title={props.thetitle}
+        target="_blank"
+        href={props.theurl}
+      >
         <i className={`icn ${props.icon}`} />
       </A>
     );
@@ -29,11 +34,11 @@ class Header extends React.Component {
       >
         <InnerHeader>
           <LeftElements>
-            <StyledLink to="/">
+            <StyledLink href="/">
               <Img src={logo} alt="Logo" />
             </StyledLink>
-            <StyledLink to="/about">About</StyledLink>
-            <StyledLink to="/blog">Blog</StyledLink>
+            <StyledLink href="/about">About</StyledLink>
+            <StyledLink href="/blog">Blog</StyledLink>
           </LeftElements>
 
           <RightElements>
