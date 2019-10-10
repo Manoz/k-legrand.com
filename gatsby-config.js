@@ -3,7 +3,7 @@ const config = require('./config/SiteConfig');
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
-module.exports = {
+const cfg = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
@@ -49,12 +49,6 @@ module.exports = {
       options: {
         name: 'posts',
         path: `${__dirname}/content/`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.siteGATrackingID,
       },
     },
     {
@@ -131,4 +125,17 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
   ],
-};
+}
+
+if (process.env.CONTEXT === 'production') {
+  const googleAnalyticsCfg = {
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      trackingId: config.siteGATrackingID,
+      head: false,
+    }
+  };
+  cfg.plugins.push(googleAnalyticsCfg);
+}
+
+module.exports = cfg;
