@@ -10,7 +10,7 @@ class AboutPage extends React.Component {
         <Container>
           <h1>About me</h1>
           <p>
-            My name is Kevin (a.k.a Manoz) I am 31 years old and I have been
+            My name is Kevin (a.k.a Manoz) I am 32 years old and I have been
             doing front-end development for a little over 7 years now.
           </p>
 
@@ -47,9 +47,9 @@ class AboutPage extends React.Component {
           <p>
             Today I build websites with Laravel or React and I discovered myself
             a new recent passion for{' '}
-            <a href="https://next.gatsbyjs.org/">Gatsby</a>.<br />I{'\''} ve
+            <a href="https://next.gatsbyjs.org/">Gatsby</a>.<br />I{"'"} ve
             decided to restart my blog so expect to see a lot of articles about
-            front-end development and my beautiful city (as soon as I{'\''}
+            front-end development and my beautiful city (as soon as I{"'"}
             ve found time to get started).
           </p>
 

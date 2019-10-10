@@ -21,7 +21,7 @@ class Nav extends React.Component {
   render() {
     return (
       <nav style={{ textAlign: 'center' }}>
-        <A href="#ido" > #what I do</A>
+        <A href="#ido"> #what I do</A>
         <A href="#ilearned">#what I learned</A>
         <A href="#clients">#who are my clients</A>
         <A href="#where">#where I am</A>

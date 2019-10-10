@@ -25,6 +25,7 @@ const H3 = styled.h3`
     from(#387cc6),
     to(#c23ffd)
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
@@ -119,14 +120,14 @@ class IndexPage extends React.Component {
             </header>
             <div>
               <p>
-                Most of my time I am building websites for my clients or for
-                me. Usually simple responsive websites with SCSS, WordPress
-                and some Javascript.
+                Most of my time I am building websites for my clients or for me.
+                Usually simple responsive websites with SCSS, WordPress and some
+                Javascript.
               </p>
 
               <p>
-                In my spare time I am building other things like nodejs apps
-                or more recently Facebook apps.
+                In my spare time I am building other things like nodejs apps or
+                more recently Facebook apps.
               </p>
 
               <p>
@@ -139,8 +140,8 @@ class IndexPage extends React.Component {
             <header style={{ marginBottom: '24px' }}>
               <H3>What I learn(ed)</H3>
               <Blockquote>
-                Tell me and I forget. Teach me and I remember. Involve me and
-                I learn.
+                Tell me and I forget. Teach me and I remember. Involve me and I
+                learn.
                 <Cite>— Benjamin Franklin</Cite>
               </Blockquote>
             </header>
@@ -175,17 +176,16 @@ class IndexPage extends React.Component {
             <header style={{ marginBottom: '24px' }}>
               <H3>Who are my clients</H3>
               <Blockquote>
-                A doctor can bury his mistakes but an architect can only
-                advise his clients to plant vines.
+                A doctor can bury his mistakes but an architect can only advise
+                his clients to plant vines.
                 <Cite>— Frank Lloyd Wright</Cite>
               </Blockquote>
             </header>
             <div>
               <p>
                 The Internets, Dodie, Faim de Lyon, Club des CML, Footengo,
-                Michel Bastos, Otako, Écoute Prolongée, FNAQPA, Éclat de
-                Verre, Fél&apos;Ain, Darty, Charal, Hépar, Les Portes du
-                Soleil, April
+                Michel Bastos, Otako, Écoute Prolongée, FNAQPA, Éclat de Verre,
+                Fél&apos;Ain, Darty, Charal, Hépar, Les Portes du Soleil, April
               </p>
             </div>
           </Section>
@@ -208,10 +208,18 @@ class IndexPage extends React.Component {
                 >
                   Facebook
                 </StyledA>
-                <StyledA rel="noopener" href="https://www.twitter.com/manoz" target="_blank">
+                <StyledA
+                  rel="noopener"
+                  href="https://www.twitter.com/manoz"
+                  target="_blank"
+                >
                   Twitter
                 </StyledA>
-                <StyledA rel="noopener" href="https://github.com/manoz" target="_blank">
+                <StyledA
+                  rel="noopener"
+                  href="https://github.com/manoz"
+                  target="_blank"
+                >
                   Github
                 </StyledA>
                 <StyledA
@@ -235,7 +243,11 @@ class IndexPage extends React.Component {
                 >
                   Stackoverflow
                 </StyledA>
-                <StyledA rel="noopener" href="http://codepen.io/Manoz" target="_blank">
+                <StyledA
+                  rel="noopener"
+                  href="http://codepen.io/Manoz"
+                  target="_blank"
+                >
                   Codepen
                 </StyledA>
               </p>

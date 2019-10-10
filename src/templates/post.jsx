@@ -13,7 +13,7 @@ import BlogSEO from '../components/SEO/BlogSEO';
 import Small from '../components/PostListing/styles/Small';
 
 import config from '../../config/SiteConfig';
-import './one-dark-pro.css';
+import '!!raw-loader!./one-dark-pro.css'; // eslint-disable-line
 
 const PostMetas = styled.div`
   align-content: center;

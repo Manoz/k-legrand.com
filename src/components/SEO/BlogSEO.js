@@ -12,7 +12,7 @@ class BlogSEO extends React.Component {
 
     const postMeta = postNode.frontmatter;
 
-    const title = postMeta.title;
+    const { title } = postMeta;
     const description = postMeta.description
       ? postMeta.description
       : postNode.excerpt;

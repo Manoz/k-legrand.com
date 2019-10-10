@@ -3,7 +3,7 @@ const config = require('./config/SiteConfig');
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
-module.exports = {
+const cfg = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
@@ -49,12 +49,6 @@ module.exports = {
       options: {
         name: 'posts',
         path: `${__dirname}/content/`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.siteGATrackingID,
       },
     },
     {
@@ -131,23 +125,17 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
   ],
-};
+}
 
-// Used to load css inside our js files using raw-loader
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === 'develop' || stage === 'build-javascript') {
-    // Load only the raw contents of regular CSS files to support CSS-in-JS
-    config.loader('css', ({ loaders, ...current }) => ({
-      ...current,
-      loader: 'raw',
-    }));
-  } else if (stage === 'build-css') {
-    // Regular CSS files shall not be processed in this stage anymore
-    config.loader('css', ({ loaders, ...current }) => ({
-      ...current,
-      loader: 'null',
-    }));
-  }
+if (process.env.CONTEXT === 'production') {
+  const googleAnalyticsCfg = {
+    resolve: 'gatsby-plugin-google-analytics',
+    options: {
+      trackingId: config.siteGATrackingID,
+      head: false,
+    }
+  };
+  cfg.plugins.push(googleAnalyticsCfg);
+}
 
-  return config;
-};
+module.exports = cfg;

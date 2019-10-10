@@ -1,7 +1,6 @@
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: var(--secondaryColor) !important;
 
   &:hover {
