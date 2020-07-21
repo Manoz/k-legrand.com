@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+const config = require('../../config/SiteConfig')
+
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -11,6 +13,7 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            siteUrl
             author
           }
         }
@@ -18,11 +21,12 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaTitle = title ?? site.siteMetadata.title
-  const metaDescription = description ?? site.siteMetadata.description
+  const metaTitle = title || site.siteMetadata.title
+  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
+      defer={false}
       htmlAttributes={{
         lang,
       }}
@@ -32,35 +36,47 @@ function SEO({ description, lang, meta, title }) {
       }
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: metaTitle,
         },
         {
-          property: `og:description`,
+          property: 'og:url',
+          content: config.siteUrl,
+        },
+        {
+          property: 'fb:app_id',
+          content: config.siteFBAppID,
+        },
+        {
+          property: 'og:image',
+          content: 'https://www.k-legrand.com/assets/screenshot.jpg',
+        },
+        {
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: 'website',
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: 'twitter:card',
+          content: 'summary',
         },
         {
-          name: `twitter:creator`,
+          name: 'twitter:creator',
           content: site.siteMetadata.author,
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: metaTitle,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
       ].concat(meta)}
@@ -69,9 +85,9 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
-  description: ``,
+  description: '',
 }
 
 SEO.propTypes = {
