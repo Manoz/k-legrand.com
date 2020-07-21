@@ -30,11 +30,11 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO />
         <div className="max-w-60 px-4 mx-auto">
-          <div className="relative rounded-lg block md:flex items-center bg-gray-100 shadow-xl min-h-card">
-            <AnimWrapper className="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg min-h-card">
-              <div className="absolute inset-0 w-full h-full">
+          <div className="relative rounded-lg block md:flex items-center bg-gray-100 shadow-xl min-h-0 md:min-h-card">
+            <AnimWrapper className="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg min-h-0 md:min-h-card">
+              <div className="relative md:absolute inset-0 w-full h-full">
                 <img
-                  className="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-1500 linear"
+                  className="relative md:absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-1500 linear"
                   src={profilPictureSrc}
                   alt="Picture of me"
                 />
