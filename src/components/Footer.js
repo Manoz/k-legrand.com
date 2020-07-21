@@ -9,11 +9,13 @@ const Footer = () => {
       className="flex flex-col md:flex-row items-center justify-between text-sm my-4 mx-auto container px-4"
       role="contentinfo"
     >
-      <div className="flex items-center flex-wrap justify-center">
-        Copyright {`©`} {year} Kevin Legrand
-        <span className="flex items-center">
+      <div className="text-center md:text-left">
+        <span>
+          Copyright {`©`} {year} Kevin Legrand
+        </span>
+        <span>
           <svg
-            className="mx-2"
+            className="mx-2 inline-block"
             height="16"
             width="16"
             viewBox="0 0 64 64"
@@ -35,8 +37,8 @@ const Footer = () => {
         </span>
       </div>
 
-      <div className="flex items-center">
-        Built with ❤️ using
+      <div>
+        <span>Built with ❤️ using</span>
         <a
           className="ml-1"
           rel="noopener noreferrer"
@@ -45,6 +47,7 @@ const Footer = () => {
           href="https://www.gatsbyjs.org/"
         >
           <svg
+            className="inline-block"
             xmlns="http://www.w3.org/2000/svg"
             height="18"
             width="18"
