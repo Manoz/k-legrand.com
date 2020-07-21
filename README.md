@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/N4O07o7.png" alt="manoz banner"/>
+<img src="https://user-images.githubusercontent.com/1554207/88003263-b8dcb080-cb04-11ea-8e63-6f059016c525.jpg" alt="manoz banner"/>
 <br />
 <div align="center">
 
@@ -32,5 +32,5 @@ Released under the [MIT](./LICENSE) license.
 [deps-dev-url]: https://david-dm.org/manoz/k-legrand.com?type=dev
 [licenses]: https://img.shields.io/badge/license-MIT-blue.svg
 [licenses-url]: https://github.com/Manoz/k-legrand.com/blob/master/LICENSE
-[version]: https://img.shields.io/badge/version-2.0.5-%23d85a94.svg
+[version]: https://img.shields.io/badge/version-3.0.0-%23d85a94.svg
 [pr]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
