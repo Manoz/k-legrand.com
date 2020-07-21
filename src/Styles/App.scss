@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './wordToggle';
+
 html,
 body {
   height: 100vh;
@@ -15,4 +17,8 @@ body {
 
 #gatsby-focus-wrapper {
   @apply flex flex-col justify-between;
+}
+
+a[aria-current='page']:not(.logo) {
+  @apply text-logo1 border-b-2 border-logo1;
 }

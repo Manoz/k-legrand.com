@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
         <nav className="flex items-center justify-between flex-wrap">
           <div className="flex items-center">
             <Link
-              className="mr-3 md:mr-4 text-logo2 hover:text-logo1 transition-colors duration-300 ease-in-out"
+              className="logo mr-3 md:mr-4 text-logo2 hover:text-logo1 transition-colors duration-300 ease-in-out"
               to="/"
               aria-label={`${siteTitle} (Go to Homepage)`}
             >
@@ -32,52 +32,52 @@ const Header = ({ siteTitle }) => {
               </svg>
             </Link>
 
-            {/* <Link
+            <Link
               to="/about/"
               className="text-white text-base md:text-xl transition-colors duration-300 ease-in-out hover:text-logo1 border-b-2 border-transparent hover:border-logo1 leading-tight"
             >
               About me
-            </Link> */}
+            </Link>
           </div>
 
           {/* Social Media icons */}
           <div className="flex items-center">
-            <Link
+            <a
               className="flex-0-auto inline-block self-center leading-none text-white mr-4 text-base md:text-xl hover:text-logo1 transition-colors duration-300 ease-in-out"
-              to="https://www.twitter.com/manoz"
+              href="https://www.twitter.com/manoz"
               rel="noreferrer noopener"
               title="Follow me on Twitter"
               target="_blank"
             >
               <FaTwitter />
-            </Link>
-            <Link
+            </a>
+            <a
               className="flex-0-auto inline-block self-center leading-none text-white mr-4 text-base md:text-xl hover:text-logo1 transition-colors duration-300 ease-in-out"
-              to="https://github.com/manoz"
+              href="https://github.com/manoz"
               rel="noreferrer noopener"
               title="Fork me on Github"
               target="_blank"
             >
               <FaGithub />
-            </Link>
-            <Link
+            </a>
+            <a
               className="flex-0-auto inline-block self-center leading-none text-white mr-4 text-base md:text-xl hover:text-logo1 transition-colors duration-300 ease-in-out"
-              to="https://www.instagram.com/manoz_/"
+              href="https://www.instagram.com/manoz_/"
               rel="noreferrer noopener"
               title="Like me on Instagram"
               target="_blank"
             >
               <FaInstagram />
-            </Link>
-            <Link
+            </a>
+            <a
               className="flex-0-auto inline-block self-center leading-none text-white text-base md:text-xl hover:text-logo1 transition-colors duration-300 ease-in-out"
-              to="http://codepen.io/Manoz/"
+              href="http://codepen.io/Manoz/"
               rel="noreferrer noopener"
               title="Play with me on Codepen"
               target="_blank"
             >
               <FaCodepen />
-            </Link>
+            </a>
           </div>
         </nav>
       </div>
