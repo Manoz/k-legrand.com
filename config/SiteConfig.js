@@ -1,20 +1,19 @@
 module.exports = {
   pathPrefix: '/',
 
-  siteTitle: 'Kevin Legrand - front end developer',
+  siteTitle: 'Kevin Legrand - Front-end developer',
   siteTitleAlt: 'Kevin Legrand',
-  siteUrl: 'http://k-legrand.com',
+  siteUrl: 'https://k-legrand.com',
   siteLogo: '/logos/icon-512x512.png',
   siteLanguage: 'en',
-  siteDescription: 'Développeur front end basé en Rhône Alpes à Lyon et Bourg-en-Bresse',
+  siteDescription: 'Front-end developer working in Lyon, France',
 
-  blogUrl: 'http://k-legrand.com/blog',
-  blogTitle: 'Manoz | Blog',
-  blogDescription: 'The blog of a guy who has a very clear opinion.',
   siteRss: '/rss.xml',
   userName: 'Manoz',
-  userAvatar: 'https://secure.gravatar.com/avatar/ef560d79761c5626beaa014c4beed5c8?size=512',
-  userDescription: 'My name is Kevin a.k.a Manoz. I am a front-end developer who lives in Lyon, France. I work in a web agency who builds websites using Laravel, React or WordPress depending on our clients.',
+  userAvatar:
+    'https://secure.gravatar.com/avatar/ef560d79761c5626beaa014c4beed5c8?size=512',
+  userDescription:
+    'My name is Kevin a.k.a Manoz. I am a Front-end developer who lives in Lyon, France. I work in a web agency who builds websites using Laravel, React or WordPress depending on our clients.',
   userLinks: [
     {
       label: 'GitHub',
@@ -28,18 +27,18 @@ module.exports = {
     },
     {
       label: 'Email',
-      url: 'mailto:hello@k-legrand.com',
+      url: 'mailto:manoz@outlook.com',
       iconClassName: 'icn icn-envelope',
     },
   ],
 
-  copyright: 'Copyright © 2018 Kevin Legrand', // Used in the RSS feed.
+  copyright: `Copyright © ${new Date().getFullYear()} Kevin Legrand`, // Used in the RSS feed.
 
   siteFBAppID: '1409742559286111',
   siteGATrackingID: 'UA-46691801-2',
 
   userTwitter: '@manoz',
-  ogSiteName: 'Blog | Kevin Legrand - front end developer',
+  ogSiteName: 'Kevin Legrand - Front-end developer',
 
   // Manifest and Progress color
   themeColor: '#387CC6',
@@ -47,4 +46,4 @@ module.exports = {
 
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'DDo MMM YYYY', // Date format for display.
-};
+}

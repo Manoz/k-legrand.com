@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://k-legrand.com/sitemap.xml
+Sitemap: https://k-legrand.com/sitemap.xml

@@ -1,7 +1,8 @@
-const urljoin = require('url-join');
-const config = require('./config/SiteConfig');
+const path = require('path')
+const urljoin = require('url-join')
+const config = require('./config/SiteConfig')
 
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 const cfg = {
   pathPrefix: config.pathPrefix,
@@ -11,6 +12,7 @@ const cfg = {
     description: config.siteDescription,
     siteUrl: urljoin(config.siteUrl, pathPrefix),
     image_url: `${urljoin(config.siteUrl, pathPrefix)}${config.siteLogo}`,
+    author: '@manoz',
 
     // rssMetadata: {
     //   site_url: urljoin(config.blogUrl, pathPrefix),
@@ -23,7 +25,6 @@ const cfg = {
     // },
   },
   plugins: [
-    'gatsby-plugin-lodash',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
@@ -40,41 +41,8 @@ const cfg = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'assets',
-        path: `${__dirname}/static/assets/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'posts',
-        path: `${__dirname}/content/`,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 920,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-autolink-headers',
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        color: config.themeColor,
-        showSpinner: false,
+        name: 'images',
+        path: path.join(__dirname, 'src', 'images'),
       },
     },
     {
@@ -111,16 +79,18 @@ const cfg = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Raleway:200,300,600',
-          'Roboto',
-          'Source+Serif+Pro:400,600,700',
+          'Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700',
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [require('tailwindcss')],
       },
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
@@ -133,9 +103,9 @@ if (process.env.CONTEXT === 'production') {
     options: {
       trackingId: config.siteGATrackingID,
       head: false,
-    }
-  };
-  cfg.plugins.push(googleAnalyticsCfg);
+    },
+  }
+  cfg.plugins.push(googleAnalyticsCfg)
 }
 
-module.exports = cfg;
+module.exports = cfg
