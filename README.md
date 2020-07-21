@@ -32,5 +32,5 @@ Released under the [MIT](./LICENSE) license.
 [deps-dev-url]: https://david-dm.org/manoz/k-legrand.com?type=dev
 [licenses]: https://img.shields.io/badge/license-MIT-blue.svg
 [licenses-url]: https://github.com/Manoz/k-legrand.com/blob/master/LICENSE
-[version]: https://img.shields.io/badge/version-3.0.0-%23d85a94.svg
+[version]: https://img.shields.io/badge/version-3.1.0-%23d85a94.svg
 [pr]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg

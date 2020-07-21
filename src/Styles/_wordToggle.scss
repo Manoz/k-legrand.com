@@ -1,0 +1,19 @@
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-word {
+  animation-name: slide-in;
+  animation-duration: 875ms; // 3500ms / 4
+}

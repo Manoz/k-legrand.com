@@ -86,7 +86,7 @@ const cfg = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        postCssPlugins: [require('tailwindcss')],
+        postCssPlugins: [require('autoprefixer'), require('tailwindcss')],
       },
     },
     'gatsby-plugin-sharp',

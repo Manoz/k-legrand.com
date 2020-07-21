@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './wordToggle';
+
+html,
+body {
+  height: 100vh;
+  @apply bg-gray-200 text-gray-700;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+#gatsby-focus-wrapper {
+  @apply flex flex-col justify-between;
+}
+
+a[aria-current='page']:not(.logo) {
+  @apply text-logo1 border-b-2 border-logo1;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transform: translatey(0);
+  }
+  50% {
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transform: translatey(0);
+  }
+}

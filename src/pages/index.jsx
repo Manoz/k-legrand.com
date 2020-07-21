@@ -1,31 +1,28 @@
 import React from 'react'
-import { gsap } from 'gsap'
-// import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import SocialStuff from '../components/SocialStuff'
+import WordToggler from '../components/WordToggler'
 
 import profilPictureSrc from '../images/me.jpg'
 
+const AnimWrapper = styled.div`
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+
+    .bg-color {
+      opacity: 0.1;
+    }
+  }
+`
+
 class IndexPage extends React.Component {
   componentDidMount() {
-    const tl = gsap.timeline()
-
-    tl.from('.js-stageFrom', {
-      duration: 1.5,
-      scale: 0.7,
-      autoAlpha: 0,
-    }).from(
-      '.js-picture, .js-bar',
-      {
-        duration: 2.5,
-        x: -150,
-      },
-      '<'
-    )
-
-    tl.play()
+    new WordToggler(this.wordEl)
   }
 
   render() {
@@ -33,18 +30,34 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO />
         <div className="max-w-60 px-4 mx-auto">
-          <div className="js-stageFrom relative rounded-lg block md:flex items-center bg-gray-100 shadow-xl min-h-card">
-            <div className="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg min-h-card">
-              <div className="absolute inset-0 w-full h-full js-picture">
+          <div className="relative rounded-lg block md:flex items-center bg-gray-100 shadow-xl min-h-card">
+            <AnimWrapper className="relative w-full md:w-2/5 h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg min-h-card">
+              <div className="absolute inset-0 w-full h-full">
                 <img
-                  className="absolute inset-0 w-full h-full object-cover object-center hover:scale-110 transform transition-transform duration-1500 linear"
+                  className="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-1500 linear"
                   src={profilPictureSrc}
                   alt="Picture of me"
                 />
               </div>
-            </div>
+              <div
+                className="bg-color absolute inset-0 w-full h-full bg-grad2 opacity-35 transition-opacity duration-1500 linear"
+                aria-hidden="true"
+              ></div>
+              <div className="absolute inset-0 w-full h-full flex items-center justify-center fill-current text-white">
+                <p className="font-sans text-center font-medium text-3xl">
+                  <span
+                    // eslint-disable-next-line no-return-assign
+                    ref={(element) => (this.wordEl = element)}
+                    className="word inline-block"
+                  >
+                    Hi
+                  </span>{' '}
+                  <br /> I{`'`}m Kevin Legrand
+                </p>
+              </div>
+            </AnimWrapper>
             <div className="w-full md:w-3/5 h-full flex items-center bg-gray-100 rounded-lg">
-              <div className="p-6 md:pr-24 md:pl-16 md:py-12 text-gray-700">
+              <div className="p-6 md:pr-24 md:pl-16 md:py-8 text-gray-700">
                 <p className="mb-4 text-md">
                   I{`'`}m working in a web agency in{' '}
                   <span className="text-logo1">Lyon, France</span>. Most of my
@@ -62,17 +75,9 @@ class IndexPage extends React.Component {
                   <span className="text-logo1">JavaScript</span> are my best
                   friends.
                 </p>
-
-                {/* <Link
-                className="flex items-center mt-3 text-grad1 hover:text-grad2 transition-colors duration-300 ease-in-out"
-                to="/work"
-              >
-                <span className="underline">Stuff I{`'`}ve done with things</span>
-                <span className="text-xs ml-1">&#x279c;</span>
-              </Link> */}
               </div>
               <svg
-                className="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-100 -ml-12 js-bar"
+                className="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-100 -ml-12"
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
               >
