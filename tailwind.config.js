@@ -16,6 +16,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      gradient: 'linear-gradient(#387cc6, #c23ffd)',
 
       logo1: '#ed6eae',
       logo2: '#d85a94',
@@ -105,7 +106,7 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
-      '320': '320px',
+      '360': '360px',
     },
     backgroundColor: (theme) => theme('colors'),
     borderColor: (theme) => ({
@@ -229,7 +230,7 @@ module.exports = {
     }),
     minHeight: {
       '0': '0',
-      card: '350px',
+      card: '312px',
       full: '100%',
       screen: '100vh',
     },

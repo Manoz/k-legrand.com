@@ -1,33 +1,53 @@
 import React from 'react'
+import styled from 'styled-components'
 
+import AboutSection from '../components/AboutSection'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
+import Blockquote from '../components/Blockquote'
+
+const GradientTitle = styled.span`
+  display: block;
+  background: linear-gradient(#387cc6, #c23ffd);
+  background-clip: text;
+  -webkit-background-clip: text; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+`
 
 const About = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    {/* <div className="max-w-60 px-4 mx-auto text-gray-700 font-light flex flex-col items-center">
-      <h1 className="text-3xl md:text-4 font-medium">About me</h1>
-
-      <p className="mb-4 text-xl font-normal">Coming soon...</p>
-    </div> */}
-
+    <SEO title="About" />
     <div className="font-sans bg-white flex flex-col min-h-screen w-full">
-      <div>
+      <div className="px-4 md:px-0 bg-gray-200 md:bg-white">
         <div className="bg-gray-200 md:overflow-hidden">
-          <div className="px-4 py-16">
+          <div className="px-4 md:pt-16">
             <div className="relative w-full md:max-w-2xl md:mx-auto text-center">
-              <h1 className="font-bold text-gray-700 text-xl sm:text-2xl md:text-5xl leading-tight mb-6">
-                A simple and smart tool that will help grow your business
+              <h1 className="font-light text-gray-700 text-xl sm:text-2xl md:text-5xl leading-tight mb-6">
+                <GradientTitle>
+                  My name is Kevin Legrand. I{`'`}m a french front-end developer
+                </GradientTitle>
               </h1>
 
-              <p className="text-gray-600 md:text-xl md:px-18">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
-              </p>
-
-              <div className="hidden md:block h-40 w-40 rounded-full bg-blue-800 absolute right-0 bottom-0 -mb-64 -mr-48"></div>
-
-              <div className="hidden md:block h-5 w-5 rounded-full bg-pink-500 absolute top-0 right-0 -mr-40 mt-32"></div>
+              <div
+                className="hidden md:block h-40 w-40 rounded-full bg-blue-800 absolute right-0 bottom-0 -mb-56 -mr-48"
+                style={{
+                  animationDuration: '6s',
+                  animationName: 'float',
+                  animationDelay: '200ms',
+                  animationTimingFunction: 'ease-in-out',
+                  animationIterationCount: 'infinite',
+                }}
+              ></div>
+              <div
+                className="hidden md:block h-5 w-5 rounded-full bg-pink-500 absolute top-0 right-0 -mr-24 mt-24"
+                style={{
+                  animationDuration: '5s',
+                  animationName: 'float',
+                  animationDelay: '600ms',
+                  animationTimingFunction: 'ease-in-out',
+                  animationIterationCount: 'infinite',
+                }}
+              ></div>
             </div>
           </div>
 
@@ -43,101 +63,91 @@ const About = () => (
           </svg>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-white shadow-lg relative z-20 px-10 -mt-320 rounded-20">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg relative z-20 md:-mt-360 rounded-md md:rounded-20 pt-4 md:pt-8">
           <div
-            className="h-20 w-20 rounded-full bg-pink-500 absolute top-0 left-0 -ml-10 -mt-10"
-            style={{ zIndex: '-1' }}
+            className="h-20 w-20 rounded-full bg-pink-500 absolute top-0 left-0 -ml-10 -mt-10 hidden md:block"
+            style={{
+              zIndex: '-1',
+              animationDuration: '6s',
+              animationName: 'float',
+              animationDelay: '1000ms',
+              animationTimingFunction: 'ease-in-out',
+              animationIterationCount: 'infinite',
+            }}
           ></div>
 
           <div
-            className="h-5 w-5 rounded-full bg-blue-500 absolute top-0 left-0 -ml-32 mt-12"
-            style={{ zIndex: '-1' }}
+            className="h-5 w-5 rounded-full bg-blue-500 absolute top-0 left-0 -ml-32 mt-12 hidden md:block"
+            style={{
+              zIndex: '-1',
+              animationDuration: '5s',
+              animationName: 'float',
+              animationDelay: '600ms',
+              animationTimingFunction: 'ease-in-out',
+              animationIterationCount: 'infinite',
+            }}
           ></div>
 
-          <div className="h-10 bg-white rounded-t-lg border-b border-gray-100"></div>
-          <div className="flex flex-col text-md">
-            <p className="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et
-              sem vestibulum, feugiat lectus vel, ultricies sem. Proin gravida
-              mollis nisl ac molestie. Praesent ut velit auctor, varius mauris
-              a, pretium urna. Fusce sodales tellus ultricies nunc ultrices, sit
-              amet dignissim felis ullamcorper. Mauris volutpat neque
-              ullamcorper, ornare enim a, egestas erat. Curabitur cursus mattis
-              lacus. Etiam pulvinar, nisi sit amet maximus tincidunt, turpis
-              libero laoreet elit, in fringilla nulla magna commodo purus. Donec
-              ante leo, auctor vel libero ac, porta imperdiet mauris. Sed
-              dapibus, leo vel feugiat volutpat, purus nisi iaculis tortor, et
-              lacinia massa eros non erat. Pellentesque id augue sagittis,
-              vulputate justo eget, luctus lectus. Vivamus faucibus rutrum arcu
-              vitae condimentum. Sed feugiat mi vel lacus pharetra interdum.
-              Fusce a ipsum egestas, vulputate augue ornare, ultrices lectus.
-              Sed in orci aliquam, aliquam tellus et, lobortis purus. Curabitur
-              tincidunt cursus est eu eleifend. Vestibulum a dolor venenatis,
-              sagittis ante semper, posuere nisi.
-            </p>
+          <div className="flex flex-col md:text-md font-normal mb-16">
+            <AboutSection>
+              <GradientTitle className="font-light text-xl md:text-3xl">
+                What I do
+              </GradientTitle>
+              <Blockquote
+                author="Confucius"
+                quote="I hear and I forget. I see and I remember. I do and I understand."
+              ></Blockquote>
+              <p className="mb-4">
+                Most of my time I am building websites for our clients or for
+                me.
+              </p>
 
-            <p className="mb-4">
-              Vivamus sed metus at lorem congue auctor in eu lorem. Mauris
-              ligula justo, hendrerit non dictum in, ullamcorper eget odio. Duis
-              luctus, ipsum sed fermentum tincidunt, orci tellus viverra neque,
-              a tincidunt est purus eu nulla. Maecenas at metus ut nisl iaculis
-              tincidunt. Vestibulum eget urna a lacus tincidunt malesuada
-              tincidunt quis ligula. Morbi sit amet interdum nulla, vitae congue
-              leo. Pellentesque habitant morbi tristique senectus et netus et
-              malesuada fames ac turpis egestas. Aliquam erat volutpat. Integer
-              ut fringilla justo. Pellentesque sed scelerisque libero. Aliquam
-              lectus nisl, elementum in libero vel, tempus consectetur augue.
-              Phasellus pharetra nisl sed porta iaculis. Sed interdum pulvinar
-              turpis nec porta. Proin ullamcorper risus sit amet eleifend
-              convallis.
-            </p>
+              <p className="mb-4">
+                I work in collaboration with project managers and sometimes help
+                them defining cost, scope and complexity of the project.
+              </p>
 
-            <p className="mb-4">
-              In pulvinar mi vitae fringilla vulputate. Aenean felis purus,
-              molestie quis leo nec, tincidunt faucibus odio. Aliquam efficitur
-              dolor id mi rhoncus, at cursus ipsum bibendum. Quisque massa urna,
-              congue eu rhoncus quis, efficitur facilisis ex. Etiam ut tempus
-              magna. Suspendisse pellentesque orci ut leo sagittis, nec
-              sollicitudin mauris condimentum. Pellentesque viverra metus odio,
-              eu sagittis ex commodo id. Nam condimentum blandit diam, eget
-              commodo urna aliquet quis. Morbi varius ligula risus, quis
-              suscipit dui porttitor vel. Phasellus mauris tellus, imperdiet non
-              ex eu, feugiat euismod ex. Donec at dapibus ligula. Curabitur sit
-              amet nunc eu felis fermentum semper. Sed nec vestibulum nunc.
-              Aenean bibendum, mauris eget semper hendrerit, lorem tellus
-              venenatis ante, a sagittis justo ex sed lectus. In volutpat
-              dapibus ligula, eget tristique neque rutrum ut. Fusce mollis
-              turpis non efficitur efficitur.
-            </p>
+              <p className="mb-4">
+                In my spare time I{`'`}m doing some R{`&`}D to try new
+                technologies.
+              </p>
+            </AboutSection>
 
-            <p className="mb-4">
-              Sed sit amet metus massa. Cras in ligula vehicula, rutrum lorem
-              sit amet, rutrum mauris. Aenean vel velit a purus lacinia tempor.
-              Nullam congue rutrum tortor, et fringilla sapien ultrices eu.
-              Integer sagittis leo nec eros rutrum, eget scelerisque ipsum
-              fringilla. Nam lacinia, lectus at lobortis porttitor, tortor velit
-              iaculis dui, in rhoncus erat nulla sit amet est. Vestibulum dictum
-              vestibulum tellus eget auctor. Nunc efficitur sem non neque
-              porttitor mattis. Maecenas suscipit nisl sit amet metus sodales
-              ultrices. In id lorem euismod, semper velit a, ornare orci. Morbi
-              luctus quis lorem nec fermentum. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Fusce dignissim, enim sit amet
-              imperdiet vehicula, lectus metus iaculis nunc, et lobortis urna
-              risus non odio. Mauris tincidunt velit in elit molestie tempus.
-            </p>
+            <AboutSection>
+              <GradientTitle className="font-light text-xl md:text-3xl">
+                What I learn(ed)
+              </GradientTitle>
+              <Blockquote
+                author="Benjamin Franklin"
+                quote="Tell me and I forget. Teach me and I remember. Involve me and I learn."
+              ></Blockquote>
+              <p className="mb-4">
+                <strong className="text-grad1">Known</strong>: HTML5, CSS3,
+                SCSS, Laravel, Tailwindcss, Bootstrap, WordPress, WooCommerce,
+                GIT, SSH, Bash, JavaScript, React, Adobe Photoshop, Adobe
+                Illustrator, Adobe Lightroom, Adobe After Effect, Cinema 4D
+              </p>
 
-            <p className="mb-4">
-              Nunc massa felis, sagittis id augue quis, facilisis finibus magna.
-              Proin gravida auctor massa, a accumsan felis faucibus vel. Sed ex
-              ligula, hendrerit venenatis luctus quis, fermentum ac libero.
-              Nullam vitae velit nec magna consectetur efficitur eu eu sem. Ut
-              lacinia, justo non imperdiet eleifend, metus neque consectetur
-              massa, id scelerisque neque metus sed metus. Nulla gravida, nisi
-              in cursus varius, elit ligula tristique erat, sed viverra nisl
-              mauris ac quam. Ut pellentesque iaculis venenatis. Nunc laoreet
-              odio quis risus ornare dignissim. Phasellus interdum varius eros
-              sed varius.
-            </p>
+              <p className="mb-4">
+                <strong className="text-grad2">Improving</strong>: ECMAScript
+                6/7, Gatsby, Chat bots, Vue.js, Laravel Livewire, Alpine.js
+              </p>
+            </AboutSection>
+
+            <AboutSection isLastSection={true}>
+              <GradientTitle className="font-light text-xl md:text-3xl">
+                Who are my clients
+              </GradientTitle>
+              <Blockquote
+                author="Frank Lloyd Wright"
+                quote="A doctor can bury his mistakes but an architect can only advise his clients to plant vines."
+              ></Blockquote>
+              <p className="mb-4">
+                Dodie, Otako, Écoute Prolongée, FNAQPA, Éclat de Verre,
+                Fél&apos;Ain, Darty, Charal, Hépar, Les Portes du Soleil, April,
+                Naos, Les Echos SA (Groupe Les Échos-Le Parisien)
+              </p>
+            </AboutSection>
           </div>
         </div>
       </div>

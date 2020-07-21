@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
@@ -58,7 +57,7 @@ class IndexPage extends React.Component {
               </div>
             </AnimWrapper>
             <div className="w-full md:w-3/5 h-full flex items-center bg-gray-100 rounded-lg">
-              <div className="p-6 md:pr-24 md:pl-16 md:py-12 text-gray-700">
+              <div className="p-6 md:pr-24 md:pl-16 md:py-8 text-gray-700">
                 <p className="mb-4 text-md">
                   I{`'`}m working in a web agency in{' '}
                   <span className="text-logo1">Lyon, France</span>. Most of my
@@ -76,14 +75,6 @@ class IndexPage extends React.Component {
                   <span className="text-logo1">JavaScript</span> are my best
                   friends.
                 </p>
-
-                {/* <Link
-                className="flex items-center mt-3 text-grad1 hover:text-grad2 transition-colors duration-300 ease-in-out"
-                to="/work"
-              >
-                <span className="underline">Stuff I{`'`}ve done with things</span>
-                <span className="text-xs ml-1">&#x279c;</span>
-              </Link> */}
               </div>
               <svg
                 className="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-100 -ml-12"
