@@ -1,100 +1,101 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
+import { useLocation } from '@reach/router'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const config = require('../../config/SiteConfig')
-
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            siteUrl
-            author
-          }
-        }
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        titleTemplate
+        defaultDescription: description
+        siteUrl
+        defaultImage: image
+        twitterUsername
+        fbAppID
+        defaultLang: lang
       }
-    `
-  )
+    }
+  }
+`
 
-  const metaTitle = title || site.siteMetadata.title
-  const metaDescription = description || site.siteMetadata.description
+const SEO = ({ title, description, image, lang }) => {
+  const { pathname } = useLocation()
+  const { site } = useStaticQuery(query)
+
+  const {
+    defaultTitle,
+    titleTemplate,
+    defaultDescription,
+    siteUrl,
+    defaultImage,
+    twitterUsername,
+    fbAppID,
+    defaultLang,
+  } = site.siteMetadata
+
+  const seo = {
+    title: title || defaultTitle,
+    lang: lang || defaultLang,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname}`,
+    fbAppID,
+  }
 
   return (
     <Helmet
-      defer={false}
-      htmlAttributes={{
-        lang,
-      }}
-      title={metaTitle}
-      titleTemplate={
-        title ? `%s | ${site.siteMetadata.title}` : site.siteMetadata.title
-      }
-      meta={[
-        {
-          name: 'description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:title',
-          content: metaTitle,
-        },
-        {
-          property: 'og:url',
-          content: config.siteUrl,
-        },
-        {
-          property: 'fb:app_id',
-          content: config.siteFBAppID,
-        },
-        {
-          property: 'og:image',
-          content: 'https://www.k-legrand.com/assets/screenshot.jpg',
-        },
-        {
-          property: 'og:description',
-          content: metaDescription,
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        {
-          name: 'twitter:creator',
-          content: site.siteMetadata.author,
-        },
-        {
-          name: 'twitter:title',
-          content: metaTitle,
-        },
-        {
-          name: 'twitter:description',
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{ lang }}
+    >
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+
+      {/* Facebook Metas tags */}
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.fbAppID && <meta property="fb:app_id" content={seo.fbAppID} />}
+      <meta name="og:type" content="website" />
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+      {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.title && <meta property="og:site_name" content={seo.title} />}
+
+      {/* Twitter Metas tags */}
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.description && (
+        <meta name="twitter:description" content={seo.description} />
+      )}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      {twitterUsername && (
+        <meta name="twitter:creator" content={twitterUsername} />
+      )}
+      <meta
+        name="twitter:image:alt"
+        content="Screenshot of my website's homepage"
+      ></meta>
+    </Helmet>
   )
 }
 
 SEO.defaultProps = {
   lang: 'en',
-  meta: [],
-  description: '',
+  title: null,
+  description: null,
+  image: null,
+  fbAppID: null,
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  lang: PropTypes.string,
 }
 
 export default SEO

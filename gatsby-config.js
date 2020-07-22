@@ -1,28 +1,21 @@
 const path = require('path')
-const urljoin = require('url-join')
-const config = require('./config/SiteConfig')
 
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+const gaTrackingId = 'UA-46691801-2'
+const description = 'Front-end developer working in Lyon, France'
+const name = 'Kevin Legrand'
 
-const cfg = {
-  pathPrefix: config.pathPrefix,
+module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
-    title: config.siteTitle,
-    titleAlt: config.siteTitleAlt,
-    description: config.siteDescription,
-    siteUrl: urljoin(config.siteUrl, pathPrefix),
-    image_url: `${urljoin(config.siteUrl, pathPrefix)}${config.siteLogo}`,
+    title: name,
+    titleTemplate: '%s | Front-end developer',
+    description,
+    siteUrl: 'https://k-legrand.com',
+    image: '/assets/screenshot.png',
+    twitterUsername: '@manoz',
     author: '@manoz',
-
-    // rssMetadata: {
-    //   site_url: urljoin(config.blogUrl, pathPrefix),
-    //   feed_url: urljoin(config.blogUrl, pathPrefix, config.siteRss),
-    //   title: config.blogTitle,
-    //   description: config.blogDescription,
-    //   image_url: `${urljoin(config.blogUrl, pathPrefix)}${config.siteLogo}`,
-    //   author: config.userName,
-    //   copyright: config.copyright,
-    // },
+    fbAppID: '1409742559286111',
+    lang: 'en',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -48,27 +41,28 @@ const cfg = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: config.siteGATrackingID,
+        trackingId: gaTrackingId || '',
       },
     },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: config.siteTitle,
+        name,
         short_name: 'Manoz',
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        theme_color: config.themeColor,
-        background_color: '#fff',
-        display: 'minimal-ui',
+        description,
+        start_url: '/',
+        theme_color: '#ed6eae',
+        background_color: '#edf2f7',
+        display: 'standalone',
+        icon: 'static/logos/icon.png',
         icons: [
           {
-            src: '/logos/icon-192x192.png',
+            src: 'static/logos/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/logos/icon-512x512.png',
+            src: 'static/logos/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
@@ -96,16 +90,3 @@ const cfg = {
     'gatsby-plugin-netlify',
   ],
 }
-
-if (process.env.CONTEXT === 'production') {
-  const googleAnalyticsCfg = {
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      trackingId: config.siteGATrackingID,
-      head: false,
-    },
-  }
-  cfg.plugins.push(googleAnalyticsCfg)
-}
-
-module.exports = cfg
