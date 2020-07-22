@@ -11,7 +11,7 @@ module.exports = {
     titleTemplate: '%s | Front-end developer',
     description,
     siteUrl: 'https://k-legrand.com',
-    image: '/assets/screenshot.png',
+    image: '/assets/screenshot.jpg',
     twitterUsername: '@manoz',
     author: '@manoz',
     fbAppID: '1409742559286111',
