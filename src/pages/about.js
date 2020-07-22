@@ -16,7 +16,10 @@ const GradientTitle = styled.span`
 
 const About = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO
+      title="About me"
+      description="Learn more about me. What I do, what I know, who are my clients"
+    />
     <div className="font-sans bg-white flex flex-col min-h-screen w-full">
       <div className="px-4 md:px-0 bg-gray-200 md:bg-white">
         <div className="bg-gray-200 md:overflow-hidden">
