@@ -10,7 +10,7 @@ module.exports = {
     title: name,
     titleTemplate: '%s | Front-end developer',
     description,
-    url: 'https://k-legrand.com',
+    siteUrl: 'https://k-legrand.com',
     image: '/assets/screenshot.png',
     twitterUsername: '@manoz',
     author: '@manoz',
